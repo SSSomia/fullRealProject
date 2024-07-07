@@ -30,6 +30,7 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.listPerson = new System.Windows.Forms.DataGridView();
+            this.addNewPerson = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.listPerson)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,14 +57,27 @@
             this.listPerson.ReadOnly = true;
             this.listPerson.RowHeadersWidth = 51;
             this.listPerson.RowTemplate.Height = 24;
-            this.listPerson.Size = new System.Drawing.Size(1086, 362);
+            this.listPerson.Size = new System.Drawing.Size(1086, 312);
             this.listPerson.TabIndex = 1;
+            // 
+            // addNewPerson
+            // 
+            this.addNewPerson.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.addNewPerson.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addNewPerson.Location = new System.Drawing.Point(1001, 162);
+            this.addNewPerson.Name = "addNewPerson";
+            this.addNewPerson.Size = new System.Drawing.Size(156, 45);
+            this.addNewPerson.TabIndex = 2;
+            this.addNewPerson.Text = "Add New Person";
+            this.addNewPerson.UseVisualStyleBackColor = false;
+            this.addNewPerson.Click += new System.EventHandler(this.addNewPerson_Click);
             // 
             // managePerson
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1228, 617);
+            this.Controls.Add(this.addNewPerson);
             this.Controls.Add(this.listPerson);
             this.Controls.Add(this.label1);
             this.Name = "managePerson";
@@ -79,5 +93,6 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView listPerson;
+        private System.Windows.Forms.Button addNewPerson;
     }
 }

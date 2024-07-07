@@ -28,5 +28,11 @@ namespace fullRealProject
         {
             _loadListpeople();
         }
+
+        private void addNewPerson_Click(object sender, EventArgs e)
+        {
+            // make user control person info
+            // link it with this button
+        }
     }
 }
