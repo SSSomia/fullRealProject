@@ -24,14 +24,9 @@ namespace fullRealProject
             listPerson.DataSource = clsPerson.getAllPerson();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            _loadListpeople();
-        }
-
         private void managePerson_Load(object sender, EventArgs e)
         {
-
+            _loadListpeople();
         }
     }
 }
