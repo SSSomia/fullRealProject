@@ -46,14 +46,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="dashBoard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="dashBoard.Designer.cs">
+      <DependentUpon>dashBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="managePeople.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="managePeople.Designer.cs">
+      <DependentUpon>managePeople.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="dashBoard.resx">
+      <DependentUpon>dashBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="managePeople.resx">
+      <DependentUpon>managePeople.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -75,6 +87,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\myProjectForContact\businessLayer0\businessLayer0.csproj">
+      <Project>{5e9e56dd-6156-44f4-beb7-affbc476a228}</Project>
+      <Name>businessLayer0</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
