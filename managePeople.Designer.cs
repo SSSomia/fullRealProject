@@ -28,10 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
-            this.listPerson = new System.Windows.Forms.DataGridView();
+            this.listPeople = new System.Windows.Forms.DataGridView();
+            this.dealWithPerosn = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.showDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addNewPerson = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.listPerson)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listPeople)).BeginInit();
+            this.dealWithPerosn.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -45,28 +51,58 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Manage Person";
             // 
-            // listPerson
+            // listPeople
             // 
-            this.listPerson.AllowUserToAddRows = false;
-            this.listPerson.AllowUserToDeleteRows = false;
-            this.listPerson.AllowUserToOrderColumns = true;
-            this.listPerson.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.listPerson.GridColor = System.Drawing.SystemColors.ActiveCaption;
-            this.listPerson.Location = new System.Drawing.Point(71, 226);
-            this.listPerson.Name = "listPerson";
-            this.listPerson.ReadOnly = true;
-            this.listPerson.RowHeadersWidth = 51;
-            this.listPerson.RowTemplate.Height = 24;
-            this.listPerson.Size = new System.Drawing.Size(1086, 312);
-            this.listPerson.TabIndex = 1;
+            this.listPeople.AllowUserToAddRows = false;
+            this.listPeople.AllowUserToDeleteRows = false;
+            this.listPeople.AllowUserToOrderColumns = true;
+            this.listPeople.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.listPeople.ContextMenuStrip = this.dealWithPerosn;
+            this.listPeople.GridColor = System.Drawing.SystemColors.ActiveCaption;
+            this.listPeople.Location = new System.Drawing.Point(71, 226);
+            this.listPeople.Name = "listPeople";
+            this.listPeople.ReadOnly = true;
+            this.listPeople.RowHeadersWidth = 51;
+            this.listPeople.RowTemplate.Height = 24;
+            this.listPeople.Size = new System.Drawing.Size(1086, 312);
+            this.listPeople.TabIndex = 1;
+            // 
+            // dealWithPerosn
+            // 
+            this.dealWithPerosn.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.dealWithPerosn.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.showDetailsToolStripMenuItem,
+            this.editToolStripMenuItem,
+            this.deleteToolStripMenuItem});
+            this.dealWithPerosn.Name = "dealWithPerosn";
+            this.dealWithPerosn.Size = new System.Drawing.Size(165, 76);
+            // 
+            // showDetailsToolStripMenuItem
+            // 
+            this.showDetailsToolStripMenuItem.Name = "showDetailsToolStripMenuItem";
+            this.showDetailsToolStripMenuItem.Size = new System.Drawing.Size(164, 24);
+            this.showDetailsToolStripMenuItem.Text = "Show Details";
+            this.showDetailsToolStripMenuItem.Click += new System.EventHandler(this.showDetailsToolStripMenuItem_Click);
+            // 
+            // editToolStripMenuItem
+            // 
+            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(164, 24);
+            this.editToolStripMenuItem.Text = "Edit";
+            // 
+            // deleteToolStripMenuItem
+            // 
+            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(164, 24);
+            this.deleteToolStripMenuItem.Text = "Delete";
             // 
             // addNewPerson
             // 
             this.addNewPerson.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.addNewPerson.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addNewPerson.Location = new System.Drawing.Point(1001, 162);
+            this.addNewPerson.Location = new System.Drawing.Point(941, 147);
             this.addNewPerson.Name = "addNewPerson";
-            this.addNewPerson.Size = new System.Drawing.Size(156, 45);
+            this.addNewPerson.Size = new System.Drawing.Size(216, 60);
             this.addNewPerson.TabIndex = 2;
             this.addNewPerson.Text = "Add New Person";
             this.addNewPerson.UseVisualStyleBackColor = false;
@@ -78,12 +114,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1228, 617);
             this.Controls.Add(this.addNewPerson);
-            this.Controls.Add(this.listPerson);
+            this.Controls.Add(this.listPeople);
             this.Controls.Add(this.label1);
             this.Name = "managePerson";
             this.Text = "managePerson";
             this.Load += new System.EventHandler(this.managePerson_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.listPerson)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listPeople)).EndInit();
+            this.dealWithPerosn.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -92,7 +129,11 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView listPerson;
+        private System.Windows.Forms.DataGridView listPeople;
         private System.Windows.Forms.Button addNewPerson;
+        private System.Windows.Forms.ContextMenuStrip dealWithPerosn;
+        private System.Windows.Forms.ToolStripMenuItem showDetailsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
     }
 }
