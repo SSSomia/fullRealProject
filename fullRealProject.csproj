@@ -89,6 +89,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="showPersonDetails.resx">
       <DependentUpon>showPersonDetails.cs</DependentUpon>
@@ -111,6 +112,9 @@
       <Project>{5e9e56dd-6156-44f4-beb7-affbc476a228}</Project>
       <Name>businessLayer0</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\undoredo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

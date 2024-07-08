@@ -14,18 +14,6 @@ namespace fullRealProject
 {
     public partial class managePerson : Form
     {
-        private int _personID, _mode;
-        // Define a custom event handler delegate with parameters
-        public event Action<int, int> onActionForPerson;
-        // Create a protected method to raise the event with a parameter
-        protected virtual void actionForPerson(int PersonID, int mode)
-        {
-            Action<int, int> handler = onActionForPerson;
-            if (handler != null)
-            {
-                handler(PersonID, mode); // Raise the event with the parameter
-            }
-        }
         public managePerson()
         {
             InitializeComponent();
@@ -50,11 +38,8 @@ namespace fullRealProject
 
         private void showDetailsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form frm = new showPersonDetails((int)listPeople.CurrentRow.Cells[0].Value, 1);
-            if (onActionForPerson != null)
-                actionForPerson(_personID, _mode);
+            Form frm = new showPersonDetails((int)listPeople.CurrentRow.Cells[0].Value);
             frm.Show();
-
         }
     }
 }

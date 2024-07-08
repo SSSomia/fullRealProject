@@ -12,21 +12,12 @@ namespace fullRealProject
 {
     public partial class showPersonDetails : Form
     {
-        private int _ind, _mode;
-        public showPersonDetails(int index, int mode)
+        private int _psersonID;
+        public showPersonDetails(int index)
         {
-            _ind = index; _mode = mode;
+            _psersonID = index;
             InitializeComponent();
-        }
-
-        private void showPersonDetails_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void personInfoUC1_Load(object sender, EventArgs e)
-        {
-
+            personInfoUC1.showData(index);
         }
     }
 }

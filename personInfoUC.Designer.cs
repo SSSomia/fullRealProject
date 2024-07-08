@@ -28,61 +28,48 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.personPicture = new System.Windows.Forms.PictureBox();
             this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.phone = new System.Windows.Forms.Label();
-            this.date = new System.Windows.Forms.Label();
             this.address = new System.Windows.Forms.Label();
             this.email = new System.Windows.Forms.Label();
             this.name = new System.Windows.Forms.Label();
             this.nationalNum = new System.Windows.Forms.Label();
             this.personID = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.personPicture)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // personPicture
             // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox1.InitialImage = null;
-            this.pictureBox1.Location = new System.Drawing.Point(691, 104);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(233, 184);
-            this.pictureBox1.TabIndex = 46;
-            this.pictureBox1.TabStop = false;
+            this.personPicture.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.personPicture.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.personPicture.InitialImage = null;
+            this.personPicture.Location = new System.Drawing.Point(691, 104);
+            this.personPicture.Name = "personPicture";
+            this.personPicture.Size = new System.Drawing.Size(233, 184);
+            this.personPicture.TabIndex = 46;
+            this.personPicture.TabStop = false;
             // 
             // label23
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(508, 227);
+            this.label23.Location = new System.Drawing.Point(455, 106);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(16, 22);
             this.label23.TabIndex = 45;
             this.label23.Text = ":";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(558, 135);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(16, 22);
-            this.label24.TabIndex = 44;
-            this.label24.Text = ":";
             // 
             // label21
             // 
@@ -138,21 +125,11 @@
             // 
             this.phone.AutoSize = true;
             this.phone.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.phone.Location = new System.Drawing.Point(530, 229);
+            this.phone.Location = new System.Drawing.Point(477, 108);
             this.phone.Name = "phone";
             this.phone.Size = new System.Drawing.Size(23, 18);
             this.phone.TabIndex = 38;
             this.phone.Text = "---";
-            // 
-            // date
-            // 
-            this.date.AutoSize = true;
-            this.date.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.date.Location = new System.Drawing.Point(580, 135);
-            this.date.Name = "date";
-            this.date.Size = new System.Drawing.Size(23, 18);
-            this.date.TabIndex = 37;
-            this.date.Text = "---";
             // 
             // address
             // 
@@ -208,21 +185,11 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(447, 227);
+            this.label7.Location = new System.Drawing.Point(394, 106);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(55, 21);
             this.label7.TabIndex = 31;
             this.label7.Text = "Phone";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(447, 136);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(104, 21);
-            this.label6.TabIndex = 30;
-            this.label6.Text = "Date Of Birth";
             // 
             // label5
             // 
@@ -279,23 +246,20 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.personPicture);
             this.Controls.Add(this.label23);
-            this.Controls.Add(this.label24);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.phone);
-            this.Controls.Add(this.date);
             this.Controls.Add(this.address);
             this.Controls.Add(this.email);
             this.Controls.Add(this.name);
             this.Controls.Add(this.nationalNum);
             this.Controls.Add(this.personID);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -303,7 +267,7 @@
             this.Controls.Add(this.label1);
             this.Name = "personInfoUC";
             this.Size = new System.Drawing.Size(961, 393);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.personPicture)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -311,23 +275,20 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox personPicture;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label phone;
-        private System.Windows.Forms.Label date;
         private System.Windows.Forms.Label address;
         private System.Windows.Forms.Label email;
         private System.Windows.Forms.Label name;
         private System.Windows.Forms.Label nationalNum;
         private System.Windows.Forms.Label personID;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
