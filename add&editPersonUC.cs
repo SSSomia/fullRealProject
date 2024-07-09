@@ -46,7 +46,12 @@ namespace fullRealProject
             return _person;
         }
 
-        private void _addPerson()
+        public void addPerson(int personId)
+        {
+            _personID = personId;
+            _intialFields();
+        }
+        private void _intialFields() 
         {
             nationalNum.Text = string.Empty;
             first.Text = string.Empty;
@@ -61,7 +66,7 @@ namespace fullRealProject
         {
             _loadData();
             nationalNum.Text = _person.nationalNum.ToString();
-            first.Text = _person.fristName.ToString();
+            first.Text = _person.firstName.ToString();
             second.Text = _person.secondName.ToString();
             third.Text = _person.thirdName.ToString();
             last.Text = _person.lastName.ToString();
@@ -85,6 +90,7 @@ namespace fullRealProject
             if (_personID == -1)
             {
                 clsPerson.addNewPerson(_fillData());
+                endWithForm();
             }
             else
             {
@@ -100,6 +106,11 @@ namespace fullRealProject
             //    // Raise the event with a parameter
             //    DoneWithForm(0);
             endWithForm();
+        }
+
+        private void addEditPerson_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

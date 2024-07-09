@@ -40,7 +40,7 @@ namespace fullRealProject
             if (_person != null) 
             {
                 personID.Text = _personId.ToString();
-                name.Text = _person.fristName + ' ' + _person.secondName + ' ' + _person.thirdName + ' ' + _person.lastName;
+                name.Text = _person.firstName + ' ' + _person.secondName + ' ' + _person.thirdName + ' ' + _person.lastName;
                 nationalNum.Text = _person.nationalNum.ToString();
                 phone.Text = _person.phone.ToString();
                 email.Text = _person.email.ToString();

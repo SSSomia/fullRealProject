@@ -273,6 +273,7 @@
             this.Controls.Add(this.label1);
             this.Name = "addEditPerson";
             this.Size = new System.Drawing.Size(887, 434);
+            this.Load += new System.EventHandler(this.addEditPerson_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

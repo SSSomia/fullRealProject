@@ -25,14 +25,14 @@ namespace fullRealProject
             { 
                 _mode = _enmode.addNew;
                 formTitle.Text = "ADD NEW CONTACT";
-
+                addEditPerson1.addPerson(personID);
+                addEditPerson1.endWithForm += endWithThisForm;
             }
             else
             {
-                _personID = personID;
                 _mode = _enmode.edit;
                 formTitle.Text = "MODIFIY CONTACT";
-                addEditPerson1.editPerson(_personID);
+                addEditPerson1.editPerson(personID);
                 addEditPerson1.endWithForm += endWithThisForm;
             }
         }

@@ -32,6 +32,10 @@ namespace fullRealProject
 
         private void addNewPerson_Click(object sender, EventArgs e)
         {
+            add_editPerson frm = new add_editPerson(-1);  // intialize object from form3   [1]
+            frm.ShowDialog();
+
+            _loadListPeople();
             // make user control person info
             // link it with this button
         }
