@@ -20,14 +20,14 @@ namespace fullRealProject
         }
 
 
-        private void _loadListpeople()
+        private void _loadListPeople()
         {
             listPeople.DataSource = clsPerson.getAllPerson();
         }
 
         private void managePerson_Load(object sender, EventArgs e)
         {
-            _loadListpeople();
+            _loadListPeople();
         }
 
         private void addNewPerson_Click(object sender, EventArgs e)
@@ -38,8 +38,36 @@ namespace fullRealProject
 
         private void showDetailsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form frm = new showPersonDetails((int)listPeople.CurrentRow.Cells[0].Value);
+            Form frm = new personInfo((int)listPeople.CurrentRow.Cells[0].Value);
             frm.Show();
+        }
+
+        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            if (MessageBox.Show("Are you sure you want to delete Person [" + listPeople.CurrentRow.Cells[0].Value + "]", "Confirm Delete", MessageBoxButtons.OKCancel) == DialogResult.OK)
+
+            {
+
+                //Perform Delele and refresh
+                if (clsPerson.deletePerson((int)listPeople.CurrentRow.Cells[0].Value))
+                {
+                    MessageBox.Show("Person Deleted Successfully.");
+                    _loadListPeople();
+                }
+
+                else
+                    MessageBox.Show("Person is not deleted.");
+
+            }
+        }
+
+        private void editToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            add_editPerson frm = new add_editPerson((int)listPeople.CurrentRow.Cells[0].Value);  // intialize object from form3   [1]
+            frm.ShowDialog();
+            
+            _loadListPeople();
         }
     }
 }

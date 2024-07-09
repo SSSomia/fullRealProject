@@ -15,7 +15,7 @@ namespace fullRealProject
 {
     public partial class personInfoUC : UserControl
     {
-        private int _personID;
+        private int _personId;
         clsPerson _person;
   
         public personInfoUC()
@@ -25,13 +25,13 @@ namespace fullRealProject
 
         public void showData(int index)
         {
-            _personID = index;
+            _personId = index;
             _loadInfo();
         }
 
         private void _loadInfo()
         {
-            _person = clsPerson.printPerson(_personID);
+            _person = clsPerson.printPerson(_personId);
                 _showPersonInfo();
         }
 
@@ -39,14 +39,20 @@ namespace fullRealProject
         {
             if (_person != null) 
             {
-                personID.Text = _personID.ToString();
+                personID.Text = _personId.ToString();
                 name.Text = _person.fristName + ' ' + _person.secondName + ' ' + _person.thirdName + ' ' + _person.lastName;
                 nationalNum.Text = _person.nationalNum.ToString();
                 phone.Text = _person.phone.ToString();
                 email.Text = _person.email.ToString();
                 address.Text = _person.address.ToString();
-                
+                personPicture.ImageLocation = @_person.imageLink.ToString();
+
             }
+        }
+
+        private void personPicture_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

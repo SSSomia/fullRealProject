@@ -10,12 +10,10 @@ using System.Windows.Forms;
 
 namespace fullRealProject
 {
-    public partial class showPersonDetails : Form
+    public partial class personInfo : Form
     {
-        private int _psersonID;
-        public showPersonDetails(int index)
+        public personInfo(int index)
         {
-            _psersonID = index;
             InitializeComponent();
             personInfoUC1.showData(index);
         }

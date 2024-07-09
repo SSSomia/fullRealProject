@@ -60,6 +60,7 @@
             this.personPicture.Size = new System.Drawing.Size(233, 184);
             this.personPicture.TabIndex = 46;
             this.personPicture.TabStop = false;
+            this.personPicture.Click += new System.EventHandler(this.personPicture_Click);
             // 
             // label23
             // 
