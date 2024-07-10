@@ -43,7 +43,7 @@
             // 
             // addEditPerson1
             // 
-            this.addEditPerson1.Location = new System.Drawing.Point(105, 134);
+            this.addEditPerson1.Location = new System.Drawing.Point(150, 137);
             this.addEditPerson1.Name = "addEditPerson1";
             this.addEditPerson1.Size = new System.Drawing.Size(887, 434);
             this.addEditPerson1.TabIndex = 1;
@@ -57,6 +57,7 @@
             this.Controls.Add(this.formTitle);
             this.Name = "add_editPerson";
             this.Text = "add_editPerson";
+            this.Load += new System.EventHandler(this.add_editPerson_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

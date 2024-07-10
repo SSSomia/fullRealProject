@@ -41,5 +41,9 @@ namespace fullRealProject
             this.Close();
         }
 
+        private void add_editPerson_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

@@ -84,6 +84,7 @@
     <Compile Include="personInfo.Designer.cs">
       <DependentUpon>personInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="validation.cs" />
     <EmbeddedResource Include="add&amp;editPerson.resx">
       <DependentUpon>add&amp;editPerson.cs</DependentUpon>
     </EmbeddedResource>

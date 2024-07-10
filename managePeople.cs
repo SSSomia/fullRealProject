@@ -28,16 +28,17 @@ namespace fullRealProject
         private void managePerson_Load(object sender, EventArgs e)
         {
             _loadListPeople();
+            _rowNums();
         }
+
+        private void _rowNums() { rowsNum.Text = clsPerson.numOfRows().ToString(); }
 
         private void addNewPerson_Click(object sender, EventArgs e)
         {
             add_editPerson frm = new add_editPerson(-1);  // intialize object from form3   [1]
             frm.ShowDialog();
-
             _loadListPeople();
-            // make user control person info
-            // link it with this button
+            _rowNums();
         }
 
         private void showDetailsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -58,6 +59,7 @@ namespace fullRealProject
                 {
                     MessageBox.Show("Person Deleted Successfully.");
                     _loadListPeople();
+                    _rowNums();
                 }
 
                 else
@@ -73,5 +75,37 @@ namespace fullRealProject
             
             _loadListPeople();
         }
+
+        private void close_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        //didn't work
+        //private void filterBox_SelectedIndexChanged(object sender, EventArgs e)
+        //{
+        //    if (filterBox.Text == "none")
+        //    {
+        //        filterBy.Visible = false;
+        //    }
+        //    else
+        //    {
+        //        BindingSource bs = new BindingSource();
+        //        bs.DataSource = listPeople.DataSource;
+        //        if (filterBox.Text == "personID")
+        //            bs.Filter = listPeople.Columns[0].HeaderText.ToString() + " LIKE '%" + filterBy.Text + "%'";
+        //        else if (filterBox.Text == "nationalNum")
+        //            bs.Filter = listPeople.Columns[2].HeaderText.ToString() + " LIKE '%" + filterBy.Text + "%'";
+        //        else if (filterBox.Text == "firstName")
+        //            bs.Filter = listPeople.Columns[3].HeaderText.ToString() + " LIKE '%" + filterBy.Text + "%'";
+        //        else if (filterBox.Text == "lastName")
+        //            bs.Filter = listPeople.Columns[4].HeaderText.ToString() + " LIKE '%" + filterBy.Text + "%'";
+        //        else if (filterBox.Text == "phone")
+        //            bs.Filter = listPeople.Columns[5].HeaderText.ToString() + " LIKE '%" + filterBy.Text + "%'";
+        //        else if (filterBox.Text == "email")
+        //            bs.Filter = listPeople.Columns[6].HeaderText.ToString() + " LIKE '%" + filterBy.Text + "%'";
+        //        listPeople.DataSource = bs;
+        //    }
+        //}
     }
 }

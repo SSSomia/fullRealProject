@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.cancel = new System.Windows.Forms.Button();
             this.save = new System.Windows.Forms.Button();
             this.address = new System.Windows.Forms.TextBox();
@@ -50,12 +51,18 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.phoneErr = new System.Windows.Forms.ErrorProvider(this.components);
+            this.emailErr = new System.Windows.Forms.ErrorProvider(this.components);
+            this.empty = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.phoneErr)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emailErr)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.empty)).BeginInit();
             this.SuspendLayout();
             // 
             // cancel
             // 
-            this.cancel.Location = new System.Drawing.Point(535, 330);
+            this.cancel.Location = new System.Drawing.Point(535, 339);
             this.cancel.Name = "cancel";
             this.cancel.Size = new System.Drawing.Size(124, 66);
             this.cancel.TabIndex = 27;
@@ -65,7 +72,7 @@
             // 
             // save
             // 
-            this.save.Location = new System.Drawing.Point(395, 330);
+            this.save.Location = new System.Drawing.Point(395, 339);
             this.save.Name = "save";
             this.save.Size = new System.Drawing.Size(124, 66);
             this.save.TabIndex = 26;
@@ -84,9 +91,12 @@
             // phone
             // 
             this.phone.Location = new System.Drawing.Point(181, 177);
+            this.phone.MaxLength = 11;
             this.phone.Name = "phone";
             this.phone.Size = new System.Drawing.Size(195, 22);
             this.phone.TabIndex = 23;
+            this.phone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.phone_KeyPress);
+            this.phone.Leave += new System.EventHandler(this.phone_Leave);
             // 
             // email
             // 
@@ -94,6 +104,7 @@
             this.email.Name = "email";
             this.email.Size = new System.Drawing.Size(195, 22);
             this.email.TabIndex = 22;
+            this.email.Leave += new System.EventHandler(this.email_Leave);
             // 
             // first
             // 
@@ -216,9 +227,11 @@
             // nationalNum
             // 
             this.nationalNum.Location = new System.Drawing.Point(181, 95);
+            this.nationalNum.MaxLength = 20;
             this.nationalNum.Name = "nationalNum";
             this.nationalNum.Size = new System.Drawing.Size(195, 22);
             this.nationalNum.TabIndex = 36;
+            this.nationalNum.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nationalNum_KeyPress);
             // 
             // pictureBox1
             // 
@@ -245,6 +258,18 @@
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // phoneErr
+            // 
+            this.phoneErr.ContainerControl = this;
+            // 
+            // emailErr
+            // 
+            this.emailErr.ContainerControl = this;
+            // 
+            // empty
+            // 
+            this.empty.ContainerControl = this;
             // 
             // addEditPerson
             // 
@@ -275,6 +300,9 @@
             this.Size = new System.Drawing.Size(887, 434);
             this.Load += new System.EventHandler(this.addEditPerson_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.phoneErr)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emailErr)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.empty)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -304,5 +332,8 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.ErrorProvider phoneErr;
+        private System.Windows.Forms.ErrorProvider emailErr;
+        private System.Windows.Forms.ErrorProvider empty;
     }
 }
