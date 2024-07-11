@@ -21,7 +21,7 @@ namespace fullRealProject
         clsPerson _person;
         private int _personID;
         string filePath = "";
-        int validArg;
+        bool nationalN = false;
         public addEditPerson()
         {
             InitializeComponent();
@@ -30,7 +30,6 @@ namespace fullRealProject
         {
             _personID = personId;
             _dataInEditMode();
-            validArg = 8;
         }
         private void _cancel_Click(object sender, EventArgs e)
         {
@@ -52,7 +51,6 @@ namespace fullRealProject
         {
             _personID = personId;
             _intialFields();
-            validArg = 0;
         }
         private void _intialFields()
         {
@@ -102,6 +100,18 @@ namespace fullRealProject
                 MessageBox.Show(_checkAllFields());
                 return;
             }
+            if (!clsValidation.phoneNum(phone.Text))
+            {
+                return;
+            }
+            if (!clsValidation.email(email.Text))
+            {
+                return;
+            }
+            if (clsValidation.isNationalNumExist(int.Parse(nationalNum.Text)))
+            {
+                return;
+            }
             if (_personID == -1)
             {
                 clsPerson.addNewPerson(_fillData());
@@ -131,6 +141,7 @@ namespace fullRealProject
         private void nationalNum_KeyPress(object sender, KeyPressEventArgs e)
         {
             clsValidation.enterNumricVal( sender,  e);
+
         }
 
         private void phone_KeyPress(object sender, KeyPressEventArgs e)
@@ -139,17 +150,17 @@ namespace fullRealProject
         }
 
 
-        private void phone_Leave(object sender, EventArgs e)
-        {
-            if (!clsValidation.phoneNum(phone.Text))
-            {
-                phoneErr.SetError(phone, "phone number isn't correct!");
-            }
-            else
-            {
-                phoneErr.Clear();
-            }
-        }
+        //private void phone_Leave(object sender, EventArgs e)
+        //{
+        //    if (!clsValidation.phoneNum(phone.Text))
+        //    {
+        //        phoneErr.SetError(phone, "phone number isn't correct!");
+        //    }
+        //    else
+        //    {
+        //        phoneErr.Clear();
+        //    }
+        //}
 
         private void email_Leave(object sender, EventArgs e)
         {
@@ -161,20 +172,6 @@ namespace fullRealProject
             {
                 emailErr.Clear();
                
-            }
-        }
-
-        private void emptyFields(TextBox sender, string text)
-        {
-            sender.ToString();
-            if (clsValidation.emptyField(text))
-            {
-                empty.SetError(sender, "this field is required!");
-                save.Enabled = false;
-            }
-            else
-            {
-                empty.Clear();
             }
         }
 
@@ -208,6 +205,53 @@ namespace fullRealProject
                 return false;
             }
             return true;
+        }
+
+        private void nationalNum_TextChanged(object sender, EventArgs e)
+        {
+            if (_personID == -1)
+            {
+                int num = int.Parse(nationalNum.Text);
+                if (clsValidation.isNationalNumExist(num))
+                {
+                    nationalNumExistErr.SetError(nationalNum, "this national number is exist!");
+                }
+                else
+                {
+                    nationalNumExistErr.Clear();
+                }
+            }
+            else
+            {
+                string national = _person.nationalNum.ToString();
+                if (nationalNum.Text != national)
+                {
+                    int num = int.Parse(nationalNum.Text);
+                    if (clsValidation.isNationalNumExist(num))
+                    {
+                        nationalNumExistErr.SetError(nationalNum, "this national number is exist!");
+                    }
+                    else
+                    {
+                        nationalNumExistErr.Clear();
+                    }
+                }
+            }
+
+        }
+
+        private void phone_TextChanged(object sender, EventArgs e)
+        {
+            if (phone.Text.Length == 0)
+                return;
+            if (!clsValidation.phoneNum(phone.Text))
+            {
+                phoneErr.SetError(phone, "phone number isn't correct!");
+            }
+            else
+            {
+                phoneErr.Clear();
+            }
         }
     }
 }

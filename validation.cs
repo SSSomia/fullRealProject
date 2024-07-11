@@ -1,4 +1,5 @@
-﻿using System;
+﻿using businessLayer0;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -25,6 +26,15 @@ namespace fullRealProject
             {
                 e.Handled = true;
             }
+        }
+
+        public static bool isNationalNumExist(int nationalNum)
+        {
+            if (clsPerson.isNationalNumExist(nationalNum))
+            {
+                return true ;
+            }
+            return false ;
         }
 
         public static bool phoneNum(string phone)

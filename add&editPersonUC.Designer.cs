@@ -54,10 +54,12 @@
             this.phoneErr = new System.Windows.Forms.ErrorProvider(this.components);
             this.emailErr = new System.Windows.Forms.ErrorProvider(this.components);
             this.empty = new System.Windows.Forms.ErrorProvider(this.components);
+            this.nationalNumExistErr = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.phoneErr)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emailErr)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.empty)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nationalNumExistErr)).BeginInit();
             this.SuspendLayout();
             // 
             // cancel
@@ -95,8 +97,8 @@
             this.phone.Name = "phone";
             this.phone.Size = new System.Drawing.Size(195, 22);
             this.phone.TabIndex = 23;
+            this.phone.TextChanged += new System.EventHandler(this.phone_TextChanged);
             this.phone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.phone_KeyPress);
-            this.phone.Leave += new System.EventHandler(this.phone_Leave);
             // 
             // email
             // 
@@ -231,6 +233,7 @@
             this.nationalNum.Name = "nationalNum";
             this.nationalNum.Size = new System.Drawing.Size(195, 22);
             this.nationalNum.TabIndex = 36;
+            this.nationalNum.TextChanged += new System.EventHandler(this.nationalNum_TextChanged);
             this.nationalNum.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nationalNum_KeyPress);
             // 
             // pictureBox1
@@ -271,6 +274,10 @@
             // 
             this.empty.ContainerControl = this;
             // 
+            // nationalNumExistErr
+            // 
+            this.nationalNumExistErr.ContainerControl = this;
+            // 
             // addEditPerson
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -303,6 +310,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.phoneErr)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emailErr)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.empty)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nationalNumExistErr)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -335,5 +343,6 @@
         private System.Windows.Forms.ErrorProvider phoneErr;
         private System.Windows.Forms.ErrorProvider emailErr;
         private System.Windows.Forms.ErrorProvider empty;
+        private System.Windows.Forms.ErrorProvider nationalNumExistErr;
     }
 }
