@@ -42,10 +42,11 @@ namespace fullRealProject
 
         private void addNewUser_Click(object sender, EventArgs e)
         {
-            Form frm = new addNewUser();
+            addNewUser frm = new addNewUser();
             frm.ShowDialog();
             loadListUsers();
             rowNums();
         }
+
     }
 }

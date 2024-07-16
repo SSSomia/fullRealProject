@@ -37,6 +37,7 @@ namespace fullRealProject
             return false ;
         }
 
+
         public static bool phoneNum(string phone)
         {
             if (phone.Length > 11 || phone.Length < 11)
@@ -65,6 +66,24 @@ namespace fullRealProject
                 return false;
             }
             return true;
+        }
+
+        public static bool isUserNameExist(string userName)
+        {
+            if (clsPerson.isUserNameExist(userName))
+            {
+                return true;
+            }
+            return false;
+        }
+
+        public static bool passwordLessThan4( string pass)
+        {
+            if (pass.Length < 4)
+            {
+                return true;
+            }
+            return false;
         }
     }
 }

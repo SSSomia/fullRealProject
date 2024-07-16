@@ -87,28 +87,28 @@ namespace fullRealProject
         //didn't work
         private void filterBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (filterBox.Text == "none")
-            {
-                filterBy.Visible = false;
-            }
-            else
-            {
-                BindingSource bs = new BindingSource();
-                bs.DataSource = listPeople.DataSource;
-                if (filterBox.Text == "personID")
-                    bs.Filter = listPeople.Columns[0].HeaderText.ToString() + " LIKE '%" + filterBy.Text + "%'";
-                else if (filterBox.Text == "nationalNum")
-                    bs.Filter = listPeople.Columns[2].HeaderText.ToString() + " LIKE '%" + filterBy.Text + "%'";
-                else if (filterBox.Text == "firstName")
-                    bs.Filter = listPeople.Columns[3].HeaderText.ToString() + " LIKE '%" + filterBy.Text + "%'";
-                else if (filterBox.Text == "lastName")
-                    bs.Filter = listPeople.Columns[4].HeaderText.ToString() + " LIKE '%" + filterBy.Text + "%'";
-                else if (filterBox.Text == "phone")
-                    bs.Filter = listPeople.Columns[5].HeaderText.ToString() + " LIKE '%" + filterBy.Text + "%'";
-                else if (filterBox.Text == "email")
-                    bs.Filter = listPeople.Columns[6].HeaderText.ToString() + " LIKE '%" + filterBy.Text + "%'";
-                listPeople.DataSource = bs;
-            }
+            //if (filterBox.Text == "none")
+            //{
+            //    filterBy.Visible = false;
+            //}
+            //else
+            //{
+            //    BindingSource bs = new BindingSource();
+            //    bs.DataSource = listPeople.DataSource;
+            //    if (filterBox.Text == "personID")
+            //        bs.Filter = listPeople.Columns[0].HeaderText.ToString() + " LIKE '%" + filterBy.Text + "%'";
+            //    else if (filterBox.Text == "nationalNum")
+            //        bs.Filter = listPeople.Columns[2].HeaderText.ToString() + " LIKE '%" + filterBy.Text + "%'";
+            //    else if (filterBox.Text == "firstName")
+            //        bs.Filter = listPeople.Columns[3].HeaderText.ToString() + " LIKE '%" + filterBy.Text + "%'";
+            //    else if (filterBox.Text == "lastName")
+            //        bs.Filter = listPeople.Columns[4].HeaderText.ToString() + " LIKE '%" + filterBy.Text + "%'";
+            //    else if (filterBox.Text == "phone")
+            //        bs.Filter = listPeople.Columns[5].HeaderText.ToString() + " LIKE '%" + filterBy.Text + "%'";
+            //    else if (filterBox.Text == "email")
+            //        bs.Filter = listPeople.Columns[6].HeaderText.ToString() + " LIKE '%" + filterBy.Text + "%'";
+            //    listPeople.DataSource = bs;
+            //}
         }
     }
 }

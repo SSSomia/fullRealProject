@@ -63,6 +63,7 @@
             this.personInfoUC1.Name = "personInfoUC1";
             this.personInfoUC1.Size = new System.Drawing.Size(961, 393);
             this.personInfoUC1.TabIndex = 0;
+            this.personInfoUC1.Load += new System.EventHandler(this.personInfoUC1_Load);
             // 
             // close
             // 

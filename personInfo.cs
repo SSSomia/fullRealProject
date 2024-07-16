@@ -33,5 +33,10 @@ namespace fullRealProject
         {
             this.Close();
         }
+
+        private void personInfoUC1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

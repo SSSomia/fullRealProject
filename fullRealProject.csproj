@@ -149,6 +149,10 @@
       <Project>{5e9e56dd-6156-44f4-beb7-affbc476a228}</Project>
       <Name>businessLayer0</Name>
     </ProjectReference>
+    <ProjectReference Include="..\userBusiness\userBusiness.csproj">
+      <Project>{e873f1d9-520d-4704-93fc-1746fc9ec69a}</Project>
+      <Name>userBusiness</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\undoredo.png" />

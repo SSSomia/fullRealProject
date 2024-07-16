@@ -29,6 +29,10 @@ namespace fullRealProject
             _personId = index;
             _loadInfo();
         }
+        public int getPersonId()
+        {
+            return _person.PersonID;
+        }
 
         private void _loadInfo()
         {
