@@ -16,12 +16,11 @@ namespace fullRealProject
 {
     public partial class addEditPerson : UserControl
     {
-        public delegate void dataBackDlg();
+        public delegate void dataBackDlg(int nationalNum);
         public event dataBackDlg endWithForm;
         clsPerson _person;
         private int _personID;
         string filePath = "";
-        bool nationalN = false;
         public addEditPerson()
         {
             InitializeComponent();
@@ -38,7 +37,7 @@ namespace fullRealProject
         // when finish we use fill data
         private clsPerson _fillData()
         {
-            _person = new clsPerson(int.Parse(nationalNum.Text), first.Text, second.Text, third.Text, last.Text, email.Text, phone.Text, address.Text, filePath);
+            _person = new clsPerson(int.Parse(nationalNum.Text), first.Text, second.Text, third.Text, last.Text, phone.Text, email.Text, address.Text, filePath);
             return _person;
         }
         private clsPerson _loadData()
@@ -47,9 +46,9 @@ namespace fullRealProject
             return _person;
         }
 
-        public void addPerson(int personId)
+        public void addPerson()
         {
-            _personID = personId;
+            _personID = -1;
             _intialFields();
         }
         private void _intialFields()
@@ -115,12 +114,12 @@ namespace fullRealProject
             if (_personID == -1)
             {
                 clsPerson.addNewPerson(_fillData());
-                endWithForm();
+                endWithForm(_person.nationalNum);
             }
             else
             {
                 clsPerson.updatePerson(_fillData(), _personID);
-                endWithForm();
+                endWithForm(_person.nationalNum);
             }
         }
 
@@ -130,7 +129,7 @@ namespace fullRealProject
             //if (onDoneWithForm != null)
             //    // Raise the event with a parameter
             //    DoneWithForm(0);
-            endWithForm();
+            endWithForm(0);
         }
 
         private void addEditPerson_Load(object sender, EventArgs e)

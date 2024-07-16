@@ -12,16 +12,16 @@ namespace fullRealProject
 {
     public partial class dashBoard : Form
     {
-        public event Action onPersonClicked;
-        // Create a protected method to raise the event with a parameter
-        protected virtual void personClicked()
-        {
-            Action handler = onPersonClicked;
-            if (handler != null)
-            {
-                handler(); // Raise the event with the parameter
-            }
-        }
+        //public event Action onPersonClicked;
+        //// Create a protected method to raise the event with a parameter
+        //protected virtual void personClicked()
+        //{
+        //    Action handler = onPersonClicked;
+        //    if (handler != null)
+        //    {
+        //        handler(); // Raise the event with the parameter
+        //    }
+        //}
         public dashBoard()
         {
             InitializeComponent();
@@ -29,11 +29,17 @@ namespace fullRealProject
 
         private void PersonToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (onPersonClicked != null)
-            {
-                personClicked();
-            }
+            //if (onPersonClicked != null)
+            //{
+            //    personClicked();
+            //}
             Form frm = new managePerson();
+            frm.ShowDialog();
+        }
+
+        private void userToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm = new manageUsers();
             frm.ShowDialog();
         }
     }

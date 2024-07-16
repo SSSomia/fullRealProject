@@ -58,6 +58,12 @@
     <Compile Include="add&amp;editPersonUC.Designer.cs">
       <DependentUpon>add&amp;editPersonUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="addNewUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addNewUser.Designer.cs">
+      <DependentUpon>addNewUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="dashBoard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +75,12 @@
     </Compile>
     <Compile Include="managePeople.Designer.cs">
       <DependentUpon>managePeople.cs</DependentUpon>
+    </Compile>
+    <Compile Include="manageUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="manageUsers.Designer.cs">
+      <DependentUpon>manageUsers.cs</DependentUpon>
     </Compile>
     <Compile Include="personInfoUC.cs">
       <SubType>UserControl</SubType>
@@ -91,11 +103,17 @@
     <EmbeddedResource Include="add&amp;editPersonUC.resx">
       <DependentUpon>add&amp;editPersonUC.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="addNewUser.resx">
+      <DependentUpon>addNewUser.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="dashBoard.resx">
       <DependentUpon>dashBoard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="managePeople.resx">
       <DependentUpon>managePeople.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="manageUsers.resx">
+      <DependentUpon>manageUsers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="personInfoUC.resx">
       <DependentUpon>personInfoUC.cs</DependentUpon>

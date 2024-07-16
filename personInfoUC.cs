@@ -17,6 +17,7 @@ namespace fullRealProject
     {
         private int _personId;
         clsPerson _person;
+        private int _nationalN;
   
         public personInfoUC()
         {
@@ -39,7 +40,7 @@ namespace fullRealProject
         {
             if (_person != null) 
             {
-                personID.Text = _personId.ToString();
+                personID.Text = _person.PersonID.ToString();
                 name.Text = _person.firstName + ' ' + _person.secondName + ' ' + _person.thirdName + ' ' + _person.lastName;
                 nationalNum.Text = _person.nationalNum.ToString();
                 phone.Text = _person.phone.ToString();
@@ -49,6 +50,20 @@ namespace fullRealProject
 
             }
         }
+
+        public void showDataWithNationalN(int index)
+        {
+            _nationalN = index;
+            _loadInfoWithNationalNum();
+        }
+
+        private void _loadInfoWithNationalNum()
+        {
+            _person = clsPerson.printPersonWithNationalNum(_nationalN);
+            _showPersonInfo();
+        }
+
+
 
         private void personPicture_Click(object sender, EventArgs e)
         {
