@@ -268,6 +268,7 @@
             this.Controls.Add(this.label1);
             this.Name = "personInfoUC";
             this.Size = new System.Drawing.Size(961, 393);
+            this.Load += new System.EventHandler(this.personInfoUC_Load);
             ((System.ComponentModel.ISupportInitialize)(this.personPicture)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

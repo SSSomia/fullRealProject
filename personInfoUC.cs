@@ -73,5 +73,10 @@ namespace fullRealProject
         {
 
         }
+
+        private void personInfoUC_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

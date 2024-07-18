@@ -38,5 +38,10 @@ namespace fullRealProject
         {
 
         }
+
+        private void personInfo_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

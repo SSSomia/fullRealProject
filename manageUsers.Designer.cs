@@ -28,12 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.addNewUser = new System.Windows.Forms.Button();
             this.listUsers = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.rowsNum = new System.Windows.Forms.Label();
+            this.dealWithUser = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.showDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.listUsers)).BeginInit();
+            this.dealWithUser.SuspendLayout();
             this.SuspendLayout();
             // 
             // addNewUser
@@ -53,7 +59,9 @@
             this.listUsers.AllowUserToAddRows = false;
             this.listUsers.AllowUserToDeleteRows = false;
             this.listUsers.AllowUserToOrderColumns = true;
+            this.listUsers.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.listUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.listUsers.ContextMenuStrip = this.dealWithUser;
             this.listUsers.GridColor = System.Drawing.SystemColors.ActiveCaption;
             this.listUsers.Location = new System.Drawing.Point(68, 240);
             this.listUsers.Name = "listUsers";
@@ -93,6 +101,35 @@
             this.rowsNum.Size = new System.Drawing.Size(0, 16);
             this.rowsNum.TabIndex = 13;
             // 
+            // dealWithUser
+            // 
+            this.dealWithUser.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.dealWithUser.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.showDetailsToolStripMenuItem,
+            this.editToolStripMenuItem,
+            this.deleteToolStripMenuItem});
+            this.dealWithUser.Name = "dealWithPerosn";
+            this.dealWithUser.Size = new System.Drawing.Size(165, 76);
+            // 
+            // showDetailsToolStripMenuItem
+            // 
+            this.showDetailsToolStripMenuItem.Name = "showDetailsToolStripMenuItem";
+            this.showDetailsToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.showDetailsToolStripMenuItem.Text = "Show Details";
+            this.showDetailsToolStripMenuItem.Click += new System.EventHandler(this.showDetailsToolStripMenuItem_Click);
+            // 
+            // editToolStripMenuItem
+            // 
+            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.editToolStripMenuItem.Text = "Edit";
+            // 
+            // deleteToolStripMenuItem
+            // 
+            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.deleteToolStripMenuItem.Text = "Delete";
+            // 
             // manageUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -107,6 +144,7 @@
             this.Text = "manageUsers";
             this.Load += new System.EventHandler(this.manageUsers_Load);
             ((System.ComponentModel.ISupportInitialize)(this.listUsers)).EndInit();
+            this.dealWithUser.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -118,5 +156,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label rowsNum;
+        private System.Windows.Forms.ContextMenuStrip dealWithUser;
+        private System.Windows.Forms.ToolStripMenuItem showDetailsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
     }
 }

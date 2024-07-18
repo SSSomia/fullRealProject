@@ -86,6 +86,7 @@
             this.Controls.Add(this.personInfoUC1);
             this.Name = "personInfo";
             this.Text = "showPersonDetails";
+            this.Load += new System.EventHandler(this.personInfo_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
