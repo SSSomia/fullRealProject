@@ -1,6 +1,6 @@
 ﻿namespace fullRealProject
 {
-    partial class addNewUser
+    partial class addEditUser
     {
         /// <summary>
         /// Required designer variable.
@@ -29,11 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.label1 = new System.Windows.Forms.Label();
+            this.formTitle = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.person = new System.Windows.Forms.TabPage();
             this.button1 = new System.Windows.Forms.Button();
             this.user = new System.Windows.Forms.TabPage();
+            this.close = new System.Windows.Forms.Button();
             this.save = new System.Windows.Forms.Button();
             this.isActive = new System.Windows.Forms.CheckBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -43,15 +44,15 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.filter = new System.Windows.Forms.Label();
             this.nationalNumber = new System.Windows.Forms.TextBox();
             this.search = new System.Windows.Forms.Button();
             this.addNewPerson = new System.Windows.Forms.Button();
             this.userNameErr = new System.Windows.Forms.ErrorProvider(this.components);
             this.passErr = new System.Windows.Forms.ErrorProvider(this.components);
             this.cPassErr = new System.Windows.Forms.ErrorProvider(this.components);
+            this.addEditPerson1 = new fullRealProject.addEditPerson();
             this.personInfoUC1 = new fullRealProject.personInfoUC();
-            this.close = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.person.SuspendLayout();
             this.user.SuspendLayout();
@@ -60,16 +61,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.cPassErr)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // formTitle
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label1.Location = new System.Drawing.Point(440, 37);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(310, 51);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Add New User";
+            this.formTitle.AutoSize = true;
+            this.formTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.formTitle.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.formTitle.Location = new System.Drawing.Point(440, 37);
+            this.formTitle.Name = "formTitle";
+            this.formTitle.Size = new System.Drawing.Size(310, 51);
+            this.formTitle.TabIndex = 0;
+            this.formTitle.Text = "Add New User";
             // 
             // tabControl1
             // 
@@ -78,17 +79,18 @@
             this.tabControl1.Location = new System.Drawing.Point(34, 167);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1147, 411);
+            this.tabControl1.Size = new System.Drawing.Size(1147, 460);
             this.tabControl1.TabIndex = 1;
             // 
             // person
             // 
+            this.person.Controls.Add(this.addEditPerson1);
             this.person.Controls.Add(this.button1);
             this.person.Controls.Add(this.personInfoUC1);
             this.person.Location = new System.Drawing.Point(4, 25);
             this.person.Name = "person";
             this.person.Padding = new System.Windows.Forms.Padding(3);
-            this.person.Size = new System.Drawing.Size(1139, 382);
+            this.person.Size = new System.Drawing.Size(1139, 431);
             this.person.TabIndex = 0;
             this.person.Text = "Person Info";
             this.person.UseVisualStyleBackColor = true;
@@ -120,10 +122,22 @@
             this.user.Location = new System.Drawing.Point(4, 25);
             this.user.Name = "user";
             this.user.Padding = new System.Windows.Forms.Padding(3);
-            this.user.Size = new System.Drawing.Size(1139, 382);
+            this.user.Size = new System.Drawing.Size(1139, 431);
             this.user.TabIndex = 1;
             this.user.Text = "User Info";
             this.user.UseVisualStyleBackColor = true;
+            this.user.Click += new System.EventHandler(this.user_Click);
+            // 
+            // close
+            // 
+            this.close.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.close.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.close.Location = new System.Drawing.Point(848, 300);
+            this.close.Name = "close";
+            this.close.Size = new System.Drawing.Size(87, 44);
+            this.close.TabIndex = 11;
+            this.close.Text = "Close";
+            this.close.UseVisualStyleBackColor = false;
             // 
             // save
             // 
@@ -160,6 +174,7 @@
             // 
             this.cPassword.Location = new System.Drawing.Point(229, 157);
             this.cPassword.Name = "cPassword";
+            this.cPassword.PasswordChar = '*';
             this.cPassword.Size = new System.Drawing.Size(116, 22);
             this.cPassword.TabIndex = 8;
             this.cPassword.TextChanged += new System.EventHandler(this.cPassword_TextChanged);
@@ -168,6 +183,7 @@
             // 
             this.password.Location = new System.Drawing.Point(160, 103);
             this.password.Name = "password";
+            this.password.PasswordChar = '*';
             this.password.Size = new System.Drawing.Size(121, 22);
             this.password.TabIndex = 7;
             this.password.TextChanged += new System.EventHandler(this.password_TextChanged);
@@ -210,16 +226,16 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "User Name:";
             // 
-            // label2
+            // filter
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label2.Location = new System.Drawing.Point(34, 124);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(211, 20);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "filter with national number :";
+            this.filter.AutoSize = true;
+            this.filter.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.filter.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.filter.Location = new System.Drawing.Point(34, 124);
+            this.filter.Name = "filter";
+            this.filter.Size = new System.Drawing.Size(211, 20);
+            this.filter.TabIndex = 2;
+            this.filter.Text = "filter with national number :";
             // 
             // nationalNumber
             // 
@@ -263,39 +279,34 @@
             // 
             this.cPassErr.ContainerControl = this;
             // 
+            // addEditPerson1
+            // 
+            this.addEditPerson1.Location = new System.Drawing.Point(6, 10);
+            this.addEditPerson1.Name = "addEditPerson1";
+            this.addEditPerson1.Size = new System.Drawing.Size(797, 415);
+            this.addEditPerson1.TabIndex = 2;
+            this.addEditPerson1.Load += new System.EventHandler(this.addEditPerson1_Load);
+            // 
             // personInfoUC1
             // 
             this.personInfoUC1.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.personInfoUC1.Location = new System.Drawing.Point(0, 1);
+            this.personInfoUC1.Location = new System.Drawing.Point(6, 28);
             this.personInfoUC1.Name = "personInfoUC1";
             this.personInfoUC1.Size = new System.Drawing.Size(938, 378);
             this.personInfoUC1.TabIndex = 0;
-            this.personInfoUC1.Load += new System.EventHandler(this.personInfoUC1_Load);
             // 
-            // close
-            // 
-            this.close.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.close.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.close.Location = new System.Drawing.Point(848, 300);
-            this.close.Name = "close";
-            this.close.Size = new System.Drawing.Size(87, 44);
-            this.close.TabIndex = 11;
-            this.close.Text = "Close";
-            this.close.UseVisualStyleBackColor = false;
-            this.close.Click += new System.EventHandler(this.close_Click);
-            // 
-            // addNewUser
+            // addEditUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1219, 602);
+            this.ClientSize = new System.Drawing.Size(1219, 683);
             this.Controls.Add(this.addNewPerson);
             this.Controls.Add(this.search);
             this.Controls.Add(this.nationalNumber);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.filter);
             this.Controls.Add(this.tabControl1);
-            this.Controls.Add(this.label1);
-            this.Name = "addNewUser";
+            this.Controls.Add(this.formTitle);
+            this.Name = "addEditUser";
             this.Text = "addNewUser";
             this.tabControl1.ResumeLayout(false);
             this.person.ResumeLayout(false);
@@ -311,11 +322,11 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label formTitle;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage person;
         private System.Windows.Forms.TabPage user;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label filter;
         private personInfoUC personInfoUC1;
         private System.Windows.Forms.TextBox nationalNumber;
         private System.Windows.Forms.Button search;
@@ -334,5 +345,6 @@
         private System.Windows.Forms.ErrorProvider cPassErr;
         private System.Windows.Forms.Button save;
         private System.Windows.Forms.Button close;
+        private addEditPerson addEditPerson1;
     }
 }

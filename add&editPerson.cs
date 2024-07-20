@@ -22,13 +22,13 @@ namespace fullRealProject
             InitializeComponent();
             if (personID == -1) 
             { 
-                formTitle.Text = "ADD NEW CONTACT";
+                formTitle.Text = "ADD NEW PERSON";
                 addEditPerson1.addPerson();
                 addEditPerson1.endWithForm += endWithThisForm;
             }
             else
             {
-                formTitle.Text = "MODIFIY CONTACT";
+                formTitle.Text = "MODIFIY PERSON";
                 addEditPerson1.editPerson(personID);
                 addEditPerson1.endWithForm += endWithThisForm;
             }

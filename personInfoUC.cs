@@ -15,7 +15,7 @@ namespace fullRealProject
 {
     public partial class personInfoUC : UserControl
     {
-        private int _personId;
+        private int _personId = 0;
         clsPerson _person;
         private int _nationalN;
   
@@ -31,6 +31,10 @@ namespace fullRealProject
         }
         public int getPersonId()
         {
+            if (_person == null)
+            {
+                return 0;
+            }
             return _person.PersonID;
         }
 

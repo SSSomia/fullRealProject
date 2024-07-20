@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
+using userBusiness;
 
 namespace fullRealProject
 {
@@ -52,23 +53,27 @@ namespace fullRealProject
 
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
-            if (MessageBox.Show("Are you sure you want to delete Person [" + listPeople.CurrentRow.Cells[0].Value + "]", "Confirm Delete", MessageBoxButtons.OKCancel) == DialogResult.OK)
-
+            if (!clsUser.isPersonExist((int)listPeople.CurrentRow.Cells[0].Value))
             {
+                if (MessageBox.Show("Are you sure you want to delete Person [" + listPeople.CurrentRow.Cells[0].Value + "]", "Confirm Delete", MessageBoxButtons.OKCancel) == DialogResult.OK)
 
-                //Perform Delele and refresh
-                if (clsPerson.deletePerson((int)listPeople.CurrentRow.Cells[0].Value))
                 {
-                    MessageBox.Show("Person Deleted Successfully.");
-                    _loadListPeople();
-                    _rowNums();
+
+                    //Perform Delele and refresh
+                    if (clsPerson.deletePerson((int)listPeople.CurrentRow.Cells[0].Value))
+                    {
+                        MessageBox.Show("Person Deleted Successfully.");
+                        _loadListPeople();
+                        _rowNums();
+                    }
+
+                    else
+                        MessageBox.Show("Person is not deleted.");
+
                 }
-
-                else
-                    MessageBox.Show("Person is not deleted.");
-
             }
+            else
+            MessageBox.Show("This person is active in system you can't delete him.");
         }
 
         private void editToolStripMenuItem_Click(object sender, EventArgs e)

@@ -28,6 +28,16 @@ namespace fullRealProject
             }
         }
 
+
+        public static bool passEquals(string pass, string cPass)
+        {
+            if (pass == cPass)
+            {
+                return true;
+            }
+            return false;
+        }
+
         public static bool isNationalNumExist(int nationalNum)
         {
             if (clsPerson.isNationalNumExist(nationalNum))

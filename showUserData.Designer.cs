@@ -31,6 +31,7 @@
             this.personInfoUC1 = new fullRealProject.personInfoUC();
             this.label1 = new System.Windows.Forms.Label();
             this.userInfoUC1 = new fullRealProject.userInfoUC();
+            this.close = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // personInfoUC1
@@ -62,11 +63,24 @@
             this.userInfoUC1.Size = new System.Drawing.Size(645, 88);
             this.userInfoUC1.TabIndex = 2;
             // 
+            // close
+            // 
+            this.close.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.close.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.close.Location = new System.Drawing.Point(907, 525);
+            this.close.Name = "close";
+            this.close.Size = new System.Drawing.Size(96, 40);
+            this.close.TabIndex = 3;
+            this.close.Text = "Close";
+            this.close.UseVisualStyleBackColor = false;
+            this.close.Click += new System.EventHandler(this.close_Click);
+            // 
             // showUserData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1064, 626);
+            this.Controls.Add(this.close);
             this.Controls.Add(this.userInfoUC1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.personInfoUC1);
@@ -83,5 +97,6 @@
         private personInfoUC personInfoUC1;
         private System.Windows.Forms.Label label1;
         private userInfoUC userInfoUC1;
+        private System.Windows.Forms.Button close;
     }
 }

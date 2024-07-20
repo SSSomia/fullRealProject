@@ -58,11 +58,11 @@
     <Compile Include="add&amp;editPersonUC.Designer.cs">
       <DependentUpon>add&amp;editPersonUC.cs</DependentUpon>
     </Compile>
-    <Compile Include="addNewUser.cs">
+    <Compile Include="addEditUser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="addNewUser.Designer.cs">
-      <DependentUpon>addNewUser.cs</DependentUpon>
+    <Compile Include="addEditUser.Designer.cs">
+      <DependentUpon>addEditUser.cs</DependentUpon>
     </Compile>
     <Compile Include="dashBoard.cs">
       <SubType>Form</SubType>
@@ -115,8 +115,8 @@
     <EmbeddedResource Include="add&amp;editPersonUC.resx">
       <DependentUpon>add&amp;editPersonUC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="addNewUser.resx">
-      <DependentUpon>addNewUser.cs</DependentUpon>
+    <EmbeddedResource Include="addEditUser.resx">
+      <DependentUpon>addEditUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="dashBoard.resx">
       <DependentUpon>dashBoard.cs</DependentUpon>

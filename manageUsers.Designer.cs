@@ -31,13 +31,13 @@
             this.components = new System.ComponentModel.Container();
             this.addNewUser = new System.Windows.Forms.Button();
             this.listUsers = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.rowsNum = new System.Windows.Forms.Label();
             this.dealWithUser = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.showDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.rowsNum = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.listUsers)).BeginInit();
             this.dealWithUser.SuspendLayout();
             this.SuspendLayout();
@@ -72,6 +72,37 @@
             this.listUsers.TabIndex = 10;
             this.listUsers.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.listPeople_CellContentClick);
             // 
+            // dealWithUser
+            // 
+            this.dealWithUser.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.dealWithUser.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.showDetailsToolStripMenuItem,
+            this.editToolStripMenuItem,
+            this.deleteToolStripMenuItem});
+            this.dealWithUser.Name = "dealWithPerosn";
+            this.dealWithUser.Size = new System.Drawing.Size(211, 104);
+            // 
+            // showDetailsToolStripMenuItem
+            // 
+            this.showDetailsToolStripMenuItem.Name = "showDetailsToolStripMenuItem";
+            this.showDetailsToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.showDetailsToolStripMenuItem.Text = "Show Details";
+            this.showDetailsToolStripMenuItem.Click += new System.EventHandler(this.showDetailsToolStripMenuItem_Click);
+            // 
+            // editToolStripMenuItem
+            // 
+            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.editToolStripMenuItem.Text = "Edit";
+            this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
+            // 
+            // deleteToolStripMenuItem
+            // 
+            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.deleteToolStripMenuItem.Text = "Delete";
+            this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -100,35 +131,6 @@
             this.rowsNum.Name = "rowsNum";
             this.rowsNum.Size = new System.Drawing.Size(0, 16);
             this.rowsNum.TabIndex = 13;
-            // 
-            // dealWithUser
-            // 
-            this.dealWithUser.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.dealWithUser.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.showDetailsToolStripMenuItem,
-            this.editToolStripMenuItem,
-            this.deleteToolStripMenuItem});
-            this.dealWithUser.Name = "dealWithPerosn";
-            this.dealWithUser.Size = new System.Drawing.Size(165, 76);
-            // 
-            // showDetailsToolStripMenuItem
-            // 
-            this.showDetailsToolStripMenuItem.Name = "showDetailsToolStripMenuItem";
-            this.showDetailsToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
-            this.showDetailsToolStripMenuItem.Text = "Show Details";
-            this.showDetailsToolStripMenuItem.Click += new System.EventHandler(this.showDetailsToolStripMenuItem_Click);
-            // 
-            // editToolStripMenuItem
-            // 
-            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
-            this.editToolStripMenuItem.Text = "Edit";
-            // 
-            // deleteToolStripMenuItem
-            // 
-            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
-            this.deleteToolStripMenuItem.Text = "Delete";
             // 
             // manageUsers
             // 
