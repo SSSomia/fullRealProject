@@ -27,6 +27,7 @@ namespace fullRealProject
                 Current_user.userName = userName.Text;
                 Current_user.password = password.Text;
                 Current_user.userID = userID;
+                this.Hide();
                 Form frm = new dashBoard();
                 frm.ShowDialog();
                 this.Close();

@@ -57,8 +57,10 @@ namespace fullRealProject
 
         private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            this.Hide();
             Form frm = new loginScreen();
             frm.ShowDialog();
+            this.Close();
         }
 
         private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
