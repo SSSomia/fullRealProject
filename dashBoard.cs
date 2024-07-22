@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using userBusiness;
 
 namespace fullRealProject
 {
@@ -40,6 +41,29 @@ namespace fullRealProject
         private void userToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form frm = new manageUsers();
+            frm.ShowDialog();
+        }
+
+        private void myAccountToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void currentUserInfoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm = new showUserDataFm(Current_user.userID, clsUser.getPersonID(Current_user.userID));
+            frm.ShowDialog();
+        }
+
+        private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm = new loginScreen();
+            frm.ShowDialog();
+        }
+
+        private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm = new changeUserPassword();
             frm.ShowDialog();
         }
     }

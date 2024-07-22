@@ -64,11 +64,24 @@
     <Compile Include="addEditUser.Designer.cs">
       <DependentUpon>addEditUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="changeUserPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="changeUserPassword.Designer.cs">
+      <DependentUpon>changeUserPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Current user.cs" />
     <Compile Include="dashBoard.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="dashBoard.Designer.cs">
       <DependentUpon>dashBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="loginScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="loginScreen.Designer.cs">
+      <DependentUpon>loginScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="managePeople.cs">
       <SubType>Form</SubType>
@@ -96,11 +109,17 @@
     <Compile Include="personInfo.Designer.cs">
       <DependentUpon>personInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="showUserData.cs">
+    <Compile Include="showUserDataFm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="showUserData.Designer.cs">
-      <DependentUpon>showUserData.cs</DependentUpon>
+    <Compile Include="showUserDataFm.Designer.cs">
+      <DependentUpon>showUserDataFm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="showUserDataUC0.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="showUserDataUC0.Designer.cs">
+      <DependentUpon>showUserDataUC0.cs</DependentUpon>
     </Compile>
     <Compile Include="userInfoUC.cs">
       <SubType>UserControl</SubType>
@@ -111,15 +130,24 @@
     <Compile Include="validation.cs" />
     <EmbeddedResource Include="add&amp;editPerson.resx">
       <DependentUpon>add&amp;editPerson.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="add&amp;editPersonUC.resx">
       <DependentUpon>add&amp;editPersonUC.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="addEditUser.resx">
       <DependentUpon>addEditUser.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="changeUserPassword.resx">
+      <DependentUpon>changeUserPassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="dashBoard.resx">
       <DependentUpon>dashBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="loginScreen.resx">
+      <DependentUpon>loginScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="managePeople.resx">
       <DependentUpon>managePeople.cs</DependentUpon>
@@ -143,8 +171,11 @@
     <EmbeddedResource Include="personInfo.resx">
       <DependentUpon>personInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="showUserData.resx">
-      <DependentUpon>showUserData.cs</DependentUpon>
+    <EmbeddedResource Include="showUserDataFm.resx">
+      <DependentUpon>showUserDataFm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="showUserDataUC0.resx">
+      <DependentUpon>showUserDataUC0.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="userInfoUC.resx">
       <DependentUpon>userInfoUC.cs</DependentUpon>
@@ -173,7 +204,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\undoredo.png" />
+    <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

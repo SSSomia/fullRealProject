@@ -51,7 +51,7 @@ namespace fullRealProject
 
         private void showDetailsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form frm = new showUserData((int)listUsers.CurrentRow.Cells[0].Value, (int)listUsers.CurrentRow.Cells[1].Value);
+            Form frm = new showUserDataFm((int)listUsers.CurrentRow.Cells[0].Value, (int)listUsers.CurrentRow.Cells[1].Value);
             frm.Show();
         }
 

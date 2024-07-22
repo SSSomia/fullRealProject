@@ -97,10 +97,9 @@ namespace fullRealProject
 
         }
 
-        private clsUser _loadUserData()
+        private void _loadUserData()
         { 
                 _user = clsUser.printUser(_userId);
-                return _user;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -211,33 +210,43 @@ namespace fullRealProject
 
         private void save_Click(object sender, EventArgs e)
         {
-            if (personInfoUC1.getPersonId() != 0)
+            if (_personID == -1)
             {
-                if (_isFielsEmpty(_checkAllFields()))
+                if (personInfoUC1.getPersonId() != 0)
                 {
-                    MessageBox.Show(_checkAllFields());
+                    if (_isFielsEmpty(_checkAllFields()))
+                    {
+                        MessageBox.Show(_checkAllFields());
+                        return;
+                    }
+                    if (clsValidation.isUserNameExist(userName.Text))
+                    {
+                        return;
+                    }
+                    if (clsValidation.passwordLessThan4(password.Text))
+                    {
+                        return;
+                    }
+                    if (!clsValidation.passEquals(password.Text, cPassword.Text))
+                    {
+                        return;
+                    }
+                    clsUser.addNewUser(_fillData());
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("you didn't choose a person to be a user");
                     return;
                 }
-                if (clsValidation.isUserNameExist(userName.Text))
-                {
-                    return;
-                }
-                if (clsValidation.passwordLessThan4(password.Text))
-                {
-                    return;
-                }
-                if (!clsValidation.passEquals(password.Text, cPassword.Text))
-                {
-                    return;
-                }
-                clsUser.addNewUser(_fillData());
+            }
+            else
+            {
+                clsUser.updateUser(_fillData(), _userId);
                 this.Close();
             }
-            else {
-                MessageBox.Show("you didn't choose a person to be a user");
-                return;
-            }
         }
+
 
         private void addEditPerson1_Load(object sender, EventArgs e)
         {

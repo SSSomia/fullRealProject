@@ -16,7 +16,7 @@ namespace fullRealProject
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new dashBoard());
+            Application.Run(new loginScreen());
         }
     }
 }

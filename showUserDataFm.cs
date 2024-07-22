@@ -10,18 +10,12 @@ using System.Windows.Forms;
 
 namespace fullRealProject
 {
-    public partial class showUserData : Form
+    public partial class showUserDataFm : Form
     {
-        public showUserData(int userID, int personID)
+        public showUserDataFm(int userID, int personID)
         {
             InitializeComponent();
-            personInfoUC1.showData(personID);
-            userInfoUC1.showData(userID);
-        }
-
-        private void showUserData_Load(object sender, EventArgs e)
-        {
-
+            showUserDataUC01.showData(userID, personID);
         }
 
         private void close_Click(object sender, EventArgs e)
