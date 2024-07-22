@@ -64,6 +64,12 @@
     <Compile Include="addEditUser.Designer.cs">
       <DependentUpon>addEditUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="applicationTypes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="applicationTypes.Designer.cs">
+      <DependentUpon>applicationTypes.cs</DependentUpon>
+    </Compile>
     <Compile Include="changeUserPassword.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +82,12 @@
     </Compile>
     <Compile Include="dashBoard.Designer.cs">
       <DependentUpon>dashBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="editAppType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="editAppType.Designer.cs">
+      <DependentUpon>editAppType.cs</DependentUpon>
     </Compile>
     <Compile Include="loginScreen.cs">
       <SubType>Form</SubType>
@@ -140,11 +152,17 @@
       <DependentUpon>addEditUser.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="applicationTypes.resx">
+      <DependentUpon>applicationTypes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="changeUserPassword.resx">
       <DependentUpon>changeUserPassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="dashBoard.resx">
       <DependentUpon>dashBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="editAppType.resx">
+      <DependentUpon>editAppType.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="loginScreen.resx">
       <DependentUpon>loginScreen.cs</DependentUpon>
@@ -194,6 +212,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\manageApplicationTypesBusiness\manageApplicationTypesBusiness.csproj">
+      <Project>{27edbc25-3df9-45f9-8a61-276932f18588}</Project>
+      <Name>manageApplicationTypesBusiness</Name>
+    </ProjectReference>
     <ProjectReference Include="..\myProjectForContact\businessLayer0\businessLayer0.csproj">
       <Project>{5e9e56dd-6156-44f4-beb7-affbc476a228}</Project>
       <Name>businessLayer0</Name>

@@ -68,5 +68,11 @@ namespace fullRealProject
             Form frm = new changeUserPassword();
             frm.ShowDialog();
         }
+
+        private void manageApplicationTypesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm = new applicationTypes();
+            frm.ShowDialog();
+        }
     }
 }
