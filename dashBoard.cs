@@ -74,5 +74,11 @@ namespace fullRealProject
             Form frm = new applicationTypes();
             frm.ShowDialog();
         }
+
+        private void manageTestTypesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm = new testTypes();
+            frm.ShowDialog();
+        }
     }
 }
