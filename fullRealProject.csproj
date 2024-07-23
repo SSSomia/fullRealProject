@@ -70,6 +70,18 @@
     <Compile Include="editTestType.Designer.cs">
       <DependentUpon>editTestType.cs</DependentUpon>
     </Compile>
+    <Compile Include="filterWithPersonInfoUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="filterWithPersonInfoUC.Designer.cs">
+      <DependentUpon>filterWithPersonInfoUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="newDrivingLicenses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="newDrivingLicenses.Designer.cs">
+      <DependentUpon>newDrivingLicenses.cs</DependentUpon>
+    </Compile>
     <Compile Include="testTypes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -166,6 +178,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="editTestType.resx">
       <DependentUpon>editTestType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="filterWithPersonInfoUC.resx">
+      <DependentUpon>filterWithPersonInfoUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="newDrivingLicenses.resx">
+      <DependentUpon>newDrivingLicenses.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="testTypes.resx">
       <DependentUpon>testTypes.cs</DependentUpon>

@@ -44,15 +44,11 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.filter = new System.Windows.Forms.Label();
-            this.nationalNumber = new System.Windows.Forms.TextBox();
-            this.search = new System.Windows.Forms.Button();
-            this.addNewPerson = new System.Windows.Forms.Button();
             this.userNameErr = new System.Windows.Forms.ErrorProvider(this.components);
             this.passErr = new System.Windows.Forms.ErrorProvider(this.components);
             this.cPassErr = new System.Windows.Forms.ErrorProvider(this.components);
             this.addEditPerson1 = new fullRealProject.addEditPerson();
-            this.personInfoUC1 = new fullRealProject.personInfoUC();
+            this.filterWithPersonInfoUC1 = new fullRealProject.filterWithPersonInfoUC();
             this.tabControl1.SuspendLayout();
             this.person.SuspendLayout();
             this.user.SuspendLayout();
@@ -76,21 +72,21 @@
             // 
             this.tabControl1.Controls.Add(this.person);
             this.tabControl1.Controls.Add(this.user);
-            this.tabControl1.Location = new System.Drawing.Point(34, 167);
+            this.tabControl1.Location = new System.Drawing.Point(42, 103);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1147, 460);
+            this.tabControl1.Size = new System.Drawing.Size(1147, 555);
             this.tabControl1.TabIndex = 1;
             // 
             // person
             // 
+            this.person.Controls.Add(this.filterWithPersonInfoUC1);
             this.person.Controls.Add(this.addEditPerson1);
             this.person.Controls.Add(this.button1);
-            this.person.Controls.Add(this.personInfoUC1);
             this.person.Location = new System.Drawing.Point(4, 25);
             this.person.Name = "person";
             this.person.Padding = new System.Windows.Forms.Padding(3);
-            this.person.Size = new System.Drawing.Size(1139, 431);
+            this.person.Size = new System.Drawing.Size(1139, 526);
             this.person.TabIndex = 0;
             this.person.Text = "Person Info";
             this.person.UseVisualStyleBackColor = true;
@@ -99,7 +95,7 @@
             // 
             this.button1.BackColor = System.Drawing.Color.LightSteelBlue;
             this.button1.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(987, 134);
+            this.button1.Location = new System.Drawing.Point(1027, 256);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(87, 44);
             this.button1.TabIndex = 1;
@@ -226,47 +222,6 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "User Name:";
             // 
-            // filter
-            // 
-            this.filter.AutoSize = true;
-            this.filter.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.filter.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.filter.Location = new System.Drawing.Point(34, 124);
-            this.filter.Name = "filter";
-            this.filter.Size = new System.Drawing.Size(211, 20);
-            this.filter.TabIndex = 2;
-            this.filter.Text = "filter with national number :";
-            // 
-            // nationalNumber
-            // 
-            this.nationalNumber.Location = new System.Drawing.Point(267, 124);
-            this.nationalNumber.Name = "nationalNumber";
-            this.nationalNumber.Size = new System.Drawing.Size(100, 22);
-            this.nationalNumber.TabIndex = 3;
-            this.nationalNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nationalNumber_KeyPress);
-            // 
-            // search
-            // 
-            this.search.Location = new System.Drawing.Point(408, 124);
-            this.search.Name = "search";
-            this.search.Size = new System.Drawing.Size(75, 23);
-            this.search.TabIndex = 4;
-            this.search.Text = "Search";
-            this.search.UseVisualStyleBackColor = true;
-            this.search.Click += new System.EventHandler(this.search_Click);
-            // 
-            // addNewPerson
-            // 
-            this.addNewPerson.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.addNewPerson.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addNewPerson.Location = new System.Drawing.Point(958, 105);
-            this.addNewPerson.Name = "addNewPerson";
-            this.addNewPerson.Size = new System.Drawing.Size(216, 60);
-            this.addNewPerson.TabIndex = 5;
-            this.addNewPerson.Text = "Add New Person";
-            this.addNewPerson.UseVisualStyleBackColor = false;
-            this.addNewPerson.Click += new System.EventHandler(this.addNewPerson_Click);
-            // 
             // userNameErr
             // 
             this.userNameErr.ContainerControl = this;
@@ -281,29 +236,25 @@
             // 
             // addEditPerson1
             // 
-            this.addEditPerson1.Location = new System.Drawing.Point(6, 10);
+            this.addEditPerson1.Location = new System.Drawing.Point(29, 44);
             this.addEditPerson1.Name = "addEditPerson1";
             this.addEditPerson1.Size = new System.Drawing.Size(797, 415);
             this.addEditPerson1.TabIndex = 2;
             this.addEditPerson1.Load += new System.EventHandler(this.addEditPerson1_Load);
             // 
-            // personInfoUC1
+            // filterWithPersonInfoUC1
             // 
-            this.personInfoUC1.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.personInfoUC1.Location = new System.Drawing.Point(6, 28);
-            this.personInfoUC1.Name = "personInfoUC1";
-            this.personInfoUC1.Size = new System.Drawing.Size(938, 378);
-            this.personInfoUC1.TabIndex = 0;
+            this.filterWithPersonInfoUC1.BackColor = System.Drawing.SystemColors.Window;
+            this.filterWithPersonInfoUC1.Location = new System.Drawing.Point(6, 6);
+            this.filterWithPersonInfoUC1.Name = "filterWithPersonInfoUC1";
+            this.filterWithPersonInfoUC1.Size = new System.Drawing.Size(996, 499);
+            this.filterWithPersonInfoUC1.TabIndex = 4;
             // 
             // addEditUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1219, 683);
-            this.Controls.Add(this.addNewPerson);
-            this.Controls.Add(this.search);
-            this.Controls.Add(this.nationalNumber);
-            this.Controls.Add(this.filter);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.formTitle);
             this.Name = "addEditUser";
@@ -326,11 +277,6 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage person;
         private System.Windows.Forms.TabPage user;
-        private System.Windows.Forms.Label filter;
-        private personInfoUC personInfoUC1;
-        private System.Windows.Forms.TextBox nationalNumber;
-        private System.Windows.Forms.Button search;
-        private System.Windows.Forms.Button addNewPerson;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.CheckBox isActive;
@@ -346,5 +292,6 @@
         private System.Windows.Forms.Button save;
         private System.Windows.Forms.Button close;
         private addEditPerson addEditPerson1;
+        private filterWithPersonInfoUC filterWithPersonInfoUC1;
     }
 }

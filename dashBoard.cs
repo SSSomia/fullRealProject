@@ -80,5 +80,11 @@ namespace fullRealProject
             Form frm = new testTypes();
             frm.ShowDialog();
         }
+
+        private void newDrivingLicensesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm = new newDrivingLicenses();
+            frm.ShowDialog();
+        }
     }
 }

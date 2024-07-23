@@ -33,11 +33,7 @@ namespace fullRealProject
             else
             {
                 formTitle.Text = "MODIFIY USER";
-                filter.Enabled = false;
-                search.Enabled = false;
-                nationalNumber.Enabled = false;
-                addNewPerson.Enabled = false;
-                personInfoUC1.Visible = false;
+                filterWithPersonInfoUC1.Visible = false;
                 _userDataInEdit();
                
             }
@@ -52,50 +48,8 @@ namespace fullRealProject
             isActive.Checked = _user.isActive;
         }
 
-        private void addNewPerson_Click(object sender, EventArgs e)
-        {
-            add_editPerson frm = new add_editPerson(-1);  // intialize object from form3   [1]
-            frm.endWithAddPerson += showPersonData;
-            frm.ShowDialog();
+        
 
-        }
-
-
-        private void showPersonData(int nationalNum)
-        {
-            if (nationalNum != 0)
-            {
-                personInfoUC1.showDataWithNationalN(nationalNum);
-            }
-        }
-
-        private void search_Click(object sender, EventArgs e)
-        {
-            if (nationalNumber.Text.Length == 0)
-            {
-                return;
-            }
-            int nationalN = int.Parse(nationalNumber.Text);
-            if (!clsPerson.isNationalNumExist(nationalN))
-            {
-                MessageBox.Show("this national number doesn't exist!");
-            }
-            else if (clsUser.getUserID(clsPerson.getPersonIdWithNationalNum(nationalN)) != 0)
-            {
-                MessageBox.Show("this national number is belong to a user!");
-            }
-            else
-            {
-                personInfoUC1.showDataWithNationalN(nationalN);
-
-            }
-        }
-
-        private void nationalNumber_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            clsValidation.enterNumricVal(sender, e);
-
-        }
 
         private void _loadUserData()
         { 
@@ -183,7 +137,7 @@ namespace fullRealProject
 
         private clsUser _fillData()
         {
-            _user = new clsUser(personInfoUC1.getPersonId(), userName.Text, password.Text, isActive.Checked);
+            _user = new clsUser(filterWithPersonInfoUC1.getPersonId(), userName.Text, password.Text, isActive.Checked);
             return _user;
         }
 
@@ -212,7 +166,7 @@ namespace fullRealProject
         {
             if (_personID == -1)
             {
-                if (personInfoUC1.getPersonId() != 0)
+                if (filterWithPersonInfoUC1.getPersonId() != 0)
                 {
                     if (_isFielsEmpty(_checkAllFields()))
                     {
