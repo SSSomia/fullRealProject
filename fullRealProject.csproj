@@ -248,6 +248,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\appBusiness\appBusiness.csproj">
+      <Project>{bc3b6fd2-03c8-4935-879f-ea6a7589c7d5}</Project>
+      <Name>appBusiness</Name>
+    </ProjectReference>
     <ProjectReference Include="..\manageApplicationTypesBusiness\manageApplicationTypesBusiness.csproj">
       <Project>{27edbc25-3df9-45f9-8a61-276932f18588}</Project>
       <Name>manageApplicationTypesBusiness</Name>

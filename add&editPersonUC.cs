@@ -209,7 +209,11 @@ namespace fullRealProject
         private void nationalNum_TextChanged(object sender, EventArgs e)
         {
             if (_personID == -1)
-            {
+            { 
+                if (nationalNum.Text == "")
+                {
+                    return;
+                }
                 int num = int.Parse(nationalNum.Text);
                 if (clsValidation.isNationalNumExist(num))
                 {

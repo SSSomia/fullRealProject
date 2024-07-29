@@ -48,8 +48,6 @@ namespace fullRealProject
             isActive.Checked = _user.isActive;
         }
 
-        
-
 
         private void _loadUserData()
         { 
@@ -209,6 +207,11 @@ namespace fullRealProject
         }
 
         private void user_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void filterWithPersonInfoUC1_Load(object sender, EventArgs e)
         {
 
         }

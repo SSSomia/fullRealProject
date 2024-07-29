@@ -32,6 +32,8 @@
             this.formTitle = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.person = new System.Windows.Forms.TabPage();
+            this.filterWithPersonInfoUC1 = new fullRealProject.filterWithPersonInfoUC();
+            this.addEditPerson1 = new fullRealProject.addEditPerson();
             this.button1 = new System.Windows.Forms.Button();
             this.user = new System.Windows.Forms.TabPage();
             this.close = new System.Windows.Forms.Button();
@@ -47,8 +49,6 @@
             this.userNameErr = new System.Windows.Forms.ErrorProvider(this.components);
             this.passErr = new System.Windows.Forms.ErrorProvider(this.components);
             this.cPassErr = new System.Windows.Forms.ErrorProvider(this.components);
-            this.addEditPerson1 = new fullRealProject.addEditPerson();
-            this.filterWithPersonInfoUC1 = new fullRealProject.filterWithPersonInfoUC();
             this.tabControl1.SuspendLayout();
             this.person.SuspendLayout();
             this.user.SuspendLayout();
@@ -91,6 +91,23 @@
             this.person.Text = "Person Info";
             this.person.UseVisualStyleBackColor = true;
             // 
+            // filterWithPersonInfoUC1
+            // 
+            this.filterWithPersonInfoUC1.BackColor = System.Drawing.SystemColors.Window;
+            this.filterWithPersonInfoUC1.Location = new System.Drawing.Point(6, 6);
+            this.filterWithPersonInfoUC1.Name = "filterWithPersonInfoUC1";
+            this.filterWithPersonInfoUC1.Size = new System.Drawing.Size(996, 499);
+            this.filterWithPersonInfoUC1.TabIndex = 4;
+            this.filterWithPersonInfoUC1.Load += new System.EventHandler(this.filterWithPersonInfoUC1_Load);
+            // 
+            // addEditPerson1
+            // 
+            this.addEditPerson1.Location = new System.Drawing.Point(29, 44);
+            this.addEditPerson1.Name = "addEditPerson1";
+            this.addEditPerson1.Size = new System.Drawing.Size(797, 415);
+            this.addEditPerson1.TabIndex = 2;
+            this.addEditPerson1.Load += new System.EventHandler(this.addEditPerson1_Load);
+            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.LightSteelBlue;
@@ -118,7 +135,7 @@
             this.user.Location = new System.Drawing.Point(4, 25);
             this.user.Name = "user";
             this.user.Padding = new System.Windows.Forms.Padding(3);
-            this.user.Size = new System.Drawing.Size(1139, 431);
+            this.user.Size = new System.Drawing.Size(1139, 526);
             this.user.TabIndex = 1;
             this.user.Text = "User Info";
             this.user.UseVisualStyleBackColor = true;
@@ -233,22 +250,6 @@
             // cPassErr
             // 
             this.cPassErr.ContainerControl = this;
-            // 
-            // addEditPerson1
-            // 
-            this.addEditPerson1.Location = new System.Drawing.Point(29, 44);
-            this.addEditPerson1.Name = "addEditPerson1";
-            this.addEditPerson1.Size = new System.Drawing.Size(797, 415);
-            this.addEditPerson1.TabIndex = 2;
-            this.addEditPerson1.Load += new System.EventHandler(this.addEditPerson1_Load);
-            // 
-            // filterWithPersonInfoUC1
-            // 
-            this.filterWithPersonInfoUC1.BackColor = System.Drawing.SystemColors.Window;
-            this.filterWithPersonInfoUC1.Location = new System.Drawing.Point(6, 6);
-            this.filterWithPersonInfoUC1.Name = "filterWithPersonInfoUC1";
-            this.filterWithPersonInfoUC1.Size = new System.Drawing.Size(996, 499);
-            this.filterWithPersonInfoUC1.TabIndex = 4;
             // 
             // addEditUser
             // 
