@@ -31,6 +31,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.person = new System.Windows.Forms.TabPage();
+            this.filterWithPersonInfoUC1 = new fullRealProject.filterWithPersonInfoUC();
             this.button1 = new System.Windows.Forms.Button();
             this.appInfo = new System.Windows.Forms.TabPage();
             this.licenseClass = new System.Windows.Forms.ComboBox();
@@ -43,7 +44,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.close = new System.Windows.Forms.Button();
             this.save = new System.Windows.Forms.Button();
-            this.filterWithPersonInfoUC1 = new fullRealProject.filterWithPersonInfoUC();
             this.tabControl1.SuspendLayout();
             this.person.SuspendLayout();
             this.appInfo.SuspendLayout();
@@ -82,6 +82,16 @@
             this.person.Text = "Person Info";
             this.person.UseVisualStyleBackColor = true;
             this.person.Click += new System.EventHandler(this.person_Click);
+            // 
+            // filterWithPersonInfoUC1
+            // 
+            this.filterWithPersonInfoUC1.BackColor = System.Drawing.SystemColors.Window;
+            this.filterWithPersonInfoUC1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.filterWithPersonInfoUC1.Location = new System.Drawing.Point(6, 10);
+            this.filterWithPersonInfoUC1.Name = "filterWithPersonInfoUC1";
+            this.filterWithPersonInfoUC1.Size = new System.Drawing.Size(996, 472);
+            this.filterWithPersonInfoUC1.TabIndex = 2;
+            this.filterWithPersonInfoUC1.Load += new System.EventHandler(this.filterWithPersonInfoUC1_Load);
             // 
             // button1
             // 
@@ -163,6 +173,7 @@
             this.appDate.Size = new System.Drawing.Size(27, 20);
             this.appDate.TabIndex = 16;
             this.appDate.Text = "---";
+            this.appDate.Click += new System.EventHandler(this.appDate_Click);
             // 
             // label5
             // 
@@ -227,16 +238,6 @@
             this.save.Text = "Save";
             this.save.UseVisualStyleBackColor = false;
             this.save.Click += new System.EventHandler(this.save_Click);
-            // 
-            // filterWithPersonInfoUC1
-            // 
-            this.filterWithPersonInfoUC1.BackColor = System.Drawing.SystemColors.Window;
-            this.filterWithPersonInfoUC1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.filterWithPersonInfoUC1.Location = new System.Drawing.Point(6, 10);
-            this.filterWithPersonInfoUC1.Name = "filterWithPersonInfoUC1";
-            this.filterWithPersonInfoUC1.Size = new System.Drawing.Size(996, 472);
-            this.filterWithPersonInfoUC1.TabIndex = 2;
-            this.filterWithPersonInfoUC1.Load += new System.EventHandler(this.filterWithPersonInfoUC1_Load);
             // 
             // newDrivingLicenses
             // 

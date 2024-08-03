@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using appBusiness;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using System.Net;
+using userBusiness;
 namespace fullRealProject
 {
     public partial class newDrivingLicenses : Form
@@ -61,7 +62,7 @@ namespace fullRealProject
         }
         private clsApp _fillData()
         {
-            app = new clsApp(_personID, 2, "new",int.Parse(appFees.Text), licenseClass.SelectedIndex + 1, DateTime.Now);
+            app = new clsApp(_personID, 2, "new",int.Parse(appFees.Text), licenseClass.SelectedIndex + 1, DateTime.Now, clsUser.getUserID(_personID));
             return app;
         }
         private void save_Click(object sender, EventArgs e)
@@ -82,6 +83,11 @@ namespace fullRealProject
             }
             clsApp.addNewApp(_fillData());
             this.Close();
+        }
+
+        private void appDate_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

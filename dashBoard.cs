@@ -86,5 +86,11 @@ namespace fullRealProject
             Form frm = new newDrivingLicenses();
             frm.ShowDialog();
         }
+
+        private void manageLocalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm = new drivingLicenseApp();
+            frm.ShowDialog();
+        }
     }
 }
