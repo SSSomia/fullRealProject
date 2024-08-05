@@ -84,5 +84,10 @@ namespace fullRealProject
             Form form = new tests("Vision Test Appointment", (int)localDrivingLicenseApps.CurrentRow.Cells[0].Value, (string)localDrivingLicenseApps.CurrentRow.Cells[3].Value, (int)localDrivingLicenseApps.CurrentRow.Cells[6].Value);
             form.ShowDialog();
         }
+
+        private void sechualTests_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

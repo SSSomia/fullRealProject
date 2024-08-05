@@ -58,6 +58,12 @@
     <Compile Include="add&amp;editPersonUC.Designer.cs">
       <DependentUpon>add&amp;editPersonUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="addEditTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addEditTest.Designer.cs">
+      <DependentUpon>addEditTest.cs</DependentUpon>
+    </Compile>
     <Compile Include="addEditUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,6 +111,12 @@
     </Compile>
     <Compile Include="newDrivingLicenses.Designer.cs">
       <DependentUpon>newDrivingLicenses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="personTestDataUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="personTestDataUC.Designer.cs">
+      <DependentUpon>personTestDataUC.cs</DependentUpon>
     </Compile>
     <Compile Include="tests.cs">
       <SubType>Form</SubType>
@@ -202,6 +214,9 @@
       <DependentUpon>add&amp;editPersonUC.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="addEditTest.resx">
+      <DependentUpon>addEditTest.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="addEditUser.resx">
       <DependentUpon>addEditUser.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -226,6 +241,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="newDrivingLicenses.resx">
       <DependentUpon>newDrivingLicenses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="personTestDataUC.resx">
+      <DependentUpon>personTestDataUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="tests.resx">
       <DependentUpon>tests.cs</DependentUpon>
@@ -304,6 +322,10 @@
     <ProjectReference Include="..\myProjectForContact\businessLayer0\businessLayer0.csproj">
       <Project>{5e9e56dd-6156-44f4-beb7-affbc476a228}</Project>
       <Name>businessLayer0</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\personTestBusiness\personTestsBusiness.csproj">
+      <Project>{0e428994-c219-4337-8d67-32a93c8d5534}</Project>
+      <Name>personTestsBusiness</Name>
     </ProjectReference>
     <ProjectReference Include="..\testTypesBusiness\testTypesBusiness.csproj">
       <Project>{80c3a570-ba38-48dc-b1c8-6f36aed39b01}</Project>
