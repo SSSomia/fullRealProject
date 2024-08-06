@@ -43,21 +43,25 @@ namespace fullRealProject
                 {
                     issueDrivingLicenseToolStripMenuItem.Enabled = false;
                     showLicenseToolStripMenuItem.Enabled = false;
+                    sechualTests.Enabled = true;
                 }
                 if ((int)localDrivingLicenseApps.CurrentRow.Cells[6].Value == 0)
                 {
                     writtenTestToolStripMenuItem.Enabled = false;
                     practicalTestToolStripMenuItem.Enabled = false;
+                    visionTestToolStripMenuItem.Enabled = true;
                 }
                 else if ((int)localDrivingLicenseApps.CurrentRow.Cells[6].Value == 1)
                 {
                     visionTestToolStripMenuItem.Enabled = false;
+                    writtenTestToolStripMenuItem.Enabled = true;
                     practicalTestToolStripMenuItem.Enabled = false;
                 }
                 else if ((int)localDrivingLicenseApps.CurrentRow.Cells[6].Value == 2)
                 {
                     visionTestToolStripMenuItem.Enabled = false;
                     writtenTestToolStripMenuItem.Enabled = false;
+                    practicalTestToolStripMenuItem .Enabled = true;
                 }
                 else
                 {
@@ -83,11 +87,25 @@ namespace fullRealProject
         {
             Form form = new tests("Vision Test Appointment", (int)localDrivingLicenseApps.CurrentRow.Cells[0].Value, (string)localDrivingLicenseApps.CurrentRow.Cells[3].Value, (int)localDrivingLicenseApps.CurrentRow.Cells[6].Value);
             form.ShowDialog();
+            _loaddrivingLicenseApp();
         }
 
+        private void writtenTestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form form = new tests("written Test Appointment", (int)localDrivingLicenseApps.CurrentRow.Cells[0].Value, (string)localDrivingLicenseApps.CurrentRow.Cells[3].Value, (int)localDrivingLicenseApps.CurrentRow.Cells[6].Value);
+            form.ShowDialog();
+            _loaddrivingLicenseApp();
+        }
         private void sechualTests_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void practicalTestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form form = new tests("practical Test Appointment", (int)localDrivingLicenseApps.CurrentRow.Cells[0].Value, (string)localDrivingLicenseApps.CurrentRow.Cells[3].Value, (int)localDrivingLicenseApps.CurrentRow.Cells[6].Value);
+            form.ShowDialog();
+            _loaddrivingLicenseApp();
         }
     }
 }

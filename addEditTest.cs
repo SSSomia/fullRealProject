@@ -17,11 +17,13 @@ namespace fullRealProject
     public partial class addEditTest : Form
     {
         bool edit = false;
+        private int _personTestID = 0;
         clsPersonTest _personTest;
         private int testID = 0;
         private int tFees = 0;
         private int applicationID = 0;
         private int trial = 0;
+        private DateTime dated = DateTime.Now;
         private string _title;
 
         public addEditTest(int applicationID, string title, int testTypeID, int trial )
@@ -33,21 +35,24 @@ namespace fullRealProject
             this.trial = trial;
             _intialFields();
         }
-        public addEditTest(int num, int testTypeID)
+        public addEditTest(int num, int testTypeID, int applicationID, int personTestID, DateTime createdDate)
         {
             InitializeComponent();
             if (num == -1)
             {
+                _personTestID = personTestID;
+                testID = testTypeID;
                 edit = true;
-                _loadData(testTypeID);
+                this.applicationID = applicationID ;
+                dated = createdDate;
+                _loadData(_personTestID);
                 _dataInEditMode();
             }
         }
         private int _totalFees(int trial, int id)
         {
             int fees = clsTestType.testFess(id);
-
-            if (trial != 1)
+            if (trial != 0)
             {
                 fees += clsTestType.testRetakeFees(id);
             }
@@ -64,9 +69,9 @@ namespace fullRealProject
             _personTest = new clsPersonTest(applicationID, testID, false, dateTimePicker1.Value.Date , trial, tFees, false);
             return _personTest;
         }
-        private clsPersonTest _loadData(int testTypeID)
+        private clsPersonTest _loadData(int personTestID)
         {
-            _personTest = clsPersonTest.printPersonTest(testTypeID);
+            _personTest = clsPersonTest.printPersonTest(personTestID);
             return _personTest;
         }
 
@@ -82,7 +87,7 @@ namespace fullRealProject
         {
             if (edit)
             {
-                clsPersonTest.updatePersonTest(dateTimePicker1.Value.Date, _personTest.personTestID);
+                clsPersonTest.updatePersonTest(_personTestID,  dateTimePicker1.Value.Date);
             }
             else
                 clsPersonTest.addNewTest(_fillData());

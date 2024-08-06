@@ -122,8 +122,9 @@
             // takeToolStripMenuItem
             // 
             this.takeToolStripMenuItem.Name = "takeToolStripMenuItem";
-            this.takeToolStripMenuItem.Size = new System.Drawing.Size(106, 24);
+            this.takeToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
             this.takeToolStripMenuItem.Text = "take";
+            this.takeToolStripMenuItem.Click += new System.EventHandler(this.takeToolStripMenuItem_Click);
             // 
             // applicationInfoUC1
             // 

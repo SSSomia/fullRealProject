@@ -100,21 +100,23 @@
             // visionTestToolStripMenuItem
             // 
             this.visionTestToolStripMenuItem.Name = "visionTestToolStripMenuItem";
-            this.visionTestToolStripMenuItem.Size = new System.Drawing.Size(177, 26);
+            this.visionTestToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.visionTestToolStripMenuItem.Text = "vision test";
             this.visionTestToolStripMenuItem.Click += new System.EventHandler(this.visionTestToolStripMenuItem_Click);
             // 
             // writtenTestToolStripMenuItem
             // 
             this.writtenTestToolStripMenuItem.Name = "writtenTestToolStripMenuItem";
-            this.writtenTestToolStripMenuItem.Size = new System.Drawing.Size(177, 26);
+            this.writtenTestToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.writtenTestToolStripMenuItem.Text = "written test";
+            this.writtenTestToolStripMenuItem.Click += new System.EventHandler(this.writtenTestToolStripMenuItem_Click);
             // 
             // practicalTestToolStripMenuItem
             // 
             this.practicalTestToolStripMenuItem.Name = "practicalTestToolStripMenuItem";
-            this.practicalTestToolStripMenuItem.Size = new System.Drawing.Size(177, 26);
+            this.practicalTestToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.practicalTestToolStripMenuItem.Text = "practical test";
+            this.practicalTestToolStripMenuItem.Click += new System.EventHandler(this.practicalTestToolStripMenuItem_Click);
             // 
             // cancelApplicationToolStripMenuItem
             // 
