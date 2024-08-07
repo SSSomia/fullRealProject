@@ -1,5 +1,6 @@
 ﻿using appBusiness;
 using businessLayer0;
+using personTestsBusiness;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -39,6 +40,7 @@ namespace fullRealProject
         {
             if ((string)localDrivingLicenseApps.CurrentRow.Cells[5].Value == "new")
             {
+                showLicenseToolStripMenuItem.Enabled = false;
                 if ((int)localDrivingLicenseApps.CurrentRow.Cells[6].Value != 3)
                 {
                     issueDrivingLicenseToolStripMenuItem.Enabled = false;
@@ -105,6 +107,19 @@ namespace fullRealProject
         {
             Form form = new tests("practical Test Appointment", (int)localDrivingLicenseApps.CurrentRow.Cells[0].Value, (string)localDrivingLicenseApps.CurrentRow.Cells[3].Value, (int)localDrivingLicenseApps.CurrentRow.Cells[6].Value);
             form.ShowDialog();
+            _loaddrivingLicenseApp();
+        }
+
+        private void issueDrivingLicenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form form = new issueDrivingLicense((int)localDrivingLicenseApps.CurrentRow.Cells[0].Value, (string)localDrivingLicenseApps.CurrentRow.Cells[3].Value);
+            form.ShowDialog();
+            _loaddrivingLicenseApp();
+        }
+
+        private void cancelApplicationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            clsPersonTest.updateState((int)localDrivingLicenseApps.CurrentRow.Cells[0].Value, "canceled");
             _loaddrivingLicenseApp();
         }
     }

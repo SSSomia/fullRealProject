@@ -106,6 +106,18 @@
     <Compile Include="filterWithPersonInfoUC.Designer.cs">
       <DependentUpon>filterWithPersonInfoUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="issueDrivingLicense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="issueDrivingLicense.Designer.cs">
+      <DependentUpon>issueDrivingLicense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="licenseInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="licenseInfo.Designer.cs">
+      <DependentUpon>licenseInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="newDrivingLicenses.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -245,6 +257,12 @@
     <EmbeddedResource Include="filterWithPersonInfoUC.resx">
       <DependentUpon>filterWithPersonInfoUC.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="issueDrivingLicense.resx">
+      <DependentUpon>issueDrivingLicense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="licenseInfo.resx">
+      <DependentUpon>licenseInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="newDrivingLicenses.resx">
       <DependentUpon>newDrivingLicenses.cs</DependentUpon>
     </EmbeddedResource>
@@ -323,6 +341,14 @@
     <ProjectReference Include="..\appBusiness\appBusiness.csproj">
       <Project>{bc3b6fd2-03c8-4935-879f-ea6a7589c7d5}</Project>
       <Name>appBusiness</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\driverBusiness\driverBusiness.csproj">
+      <Project>{d97ebd37-deb9-41fa-bf0e-9d266979bd7e}</Project>
+      <Name>driverBusiness</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\licenseBusiness\licenseBusiness.csproj">
+      <Project>{b1ceb0e6-1d88-4961-888d-7e0c6c4422cf}</Project>
+      <Name>licenseBusiness</Name>
     </ProjectReference>
     <ProjectReference Include="..\manageApplicationTypesBusiness\manageApplicationTypesBusiness.csproj">
       <Project>{27edbc25-3df9-45f9-8a61-276932f18588}</Project>

@@ -62,7 +62,7 @@ namespace fullRealProject
         }
         private clsApp _fillData()
         {
-            app = new clsApp(_personID, 2, "new",int.Parse(appFees.Text), licenseClass.SelectedIndex + 1, DateTime.Now, clsUser.getUserID(_personID));
+            app = new clsApp(_personID, 2, "new",int.Parse(appFees.Text), licenseClass.SelectedIndex + 1, DateTime.Now, Current_user.userID);
             return app;
         }
         private void save_Click(object sender, EventArgs e)
