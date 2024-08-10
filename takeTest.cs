@@ -43,7 +43,7 @@ namespace fullRealProject
         private clsLicense _fillLicenseData()
         {
             int licenseClassID = clsApp.getLIcenseID(_applicationID);
-            license = new clsLicense(licenseClassID, DateTime.Now, DateTime.Now.AddYears(clsApp.yearsOfLicense(licenseClassID)), clsDriver.addNewDriver(_fillDriverData()), Current_user.userID);
+            license = new clsLicense(licenseClassID, DateTime.Now, DateTime.Now.AddYears(clsApp.yearsOfLicense(licenseClassID)), clsDriver.addNewDriver(_fillDriverData()), Current_user.userID, _applicationID);
                 return license;
         }
 

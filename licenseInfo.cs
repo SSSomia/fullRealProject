@@ -1,5 +1,6 @@
 ﻿using appBusiness;
 using businessLayer0;
+using driverBusiness;
 using licenseBusiness;
 using System;
 using System.Collections.Generic;
@@ -19,6 +20,7 @@ namespace fullRealProject
         private int _licenseID = 0;
         private int applicationID = 0;
         clsLicense _license;
+        clsDriver _drvier;
         public licenseInfo()
         {
             InitializeComponent();
@@ -28,24 +30,35 @@ namespace fullRealProject
         {
 
         }
-        //public void showDate(int applicationID)
-        //{
-        //    this.applicationID= applicationID;
-        //    _loadInfo();
-        //}
+        public void showDate(int applicationID)
+        {
+            this.applicationID = applicationID;
+            _loadInfo();
+        }
 
-        //private void _loadInfo()
-        //{
-        //    _license = clsLicense.printLicense(_licenseID);
-        //    _showLicenseInfo();
-        //}
+        private void _loadInfo()
+        {
+            _licenseID = clsLicense.getLicenseID(applicationID);
+            _license = clsLicense.printLicense(_licenseID);
+            _drvier = clsDriver.printDriver(_license.driverID);
+            _showLicenseInfo();
+        }
 
-        //private void _showLicenseInfo()
-        //{
-        //    if (_license != null)
-        //    {
-        //        name.Text = clsApp.getApplicantName(applicationID);
-        //    }
-        //}
+        private void _showLicenseInfo()
+        {
+            if (_license != null)
+            {
+                name.Text = clsApp.getApplicantName(_drvier.personID);
+                licenseClass.Text = clsApp.getLicenseClass(_license.licenseClassID);
+                licenseID.Text = _licenseID.ToString();
+                nationalNum.Text = clsPerson.nationalNumber(_drvier.personID).ToString();
+                issueDate.Text = _license.issueDate.ToString("dd/MM/yyyy");
+                expirationDate.Text = _license.expirationDate.ToString("dd/MM/yyyy");
+                driverID.Text = _drvier.driverID.ToString();
+                isActive.Text = _license.isActive.ToString();
+                personPicture.ImageLocation = @clsPerson.getImageLink(_drvier.personID).ToString();
+
+            }
+        }
     }
 }

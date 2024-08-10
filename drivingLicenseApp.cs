@@ -7,6 +7,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -69,7 +70,6 @@ namespace fullRealProject
                 {
                     sechualTests.Enabled = false;
                     issueDrivingLicenseToolStripMenuItem.Enabled = true;
-                    showLicenseToolStripMenuItem.Enabled = true;
                 }
             }
             else if ((string)localDrivingLicenseApps.CurrentRow.Cells[5].Value == "canceled")
@@ -121,6 +121,12 @@ namespace fullRealProject
         {
             clsPersonTest.updateState((int)localDrivingLicenseApps.CurrentRow.Cells[0].Value, "canceled");
             _loaddrivingLicenseApp();
+        }
+
+        private void showLicenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm = new showLicenseInfo((int)localDrivingLicenseApps.CurrentRow.Cells[0].Value);
+            frm.ShowDialog();
         }
     }
 }
