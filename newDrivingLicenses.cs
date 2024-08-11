@@ -73,13 +73,15 @@ namespace fullRealProject
                 MessageBox.Show("you don't choose the person!!");
                 return;
             }
-            if (clsApp.isPersonHaveLicense(_personID))
+             if (clsApp.isPersonHaveSameLicense(_personID, licenseClass.SelectedIndex + 1))
             {
-                if (clsApp.isPersonHaveSameLicense(_personID, licenseClass.SelectedIndex + 1))
-                {
-                    MessageBox.Show("this person has this license or an application to this license class!!");
-                    return;
-                }
+                MessageBox.Show("this person has this license class!!");
+                return;
+            }
+            else if(clsApp.isPersonHaveLicense(_personID, licenseClass.SelectedIndex + 1))
+            {
+                MessageBox.Show("this person has application for this license!!");
+                return;
             }
             clsApp.addNewApp(_fillData());
             this.Close();

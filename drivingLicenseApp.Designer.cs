@@ -72,6 +72,7 @@
             this.localDrivingLicenseApps.RowTemplate.Height = 24;
             this.localDrivingLicenseApps.Size = new System.Drawing.Size(939, 356);
             this.localDrivingLicenseApps.TabIndex = 1;
+            this.localDrivingLicenseApps.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.localDrivingLicenseApps_CellContentClick);
             // 
             // dealWithLicense
             // 
@@ -83,7 +84,7 @@
             this.showLicenseToolStripMenuItem,
             this.showPersonLicenseHistoryToolStripMenuItem});
             this.dealWithLicense.Name = "dealWithPerosn";
-            this.dealWithLicense.Size = new System.Drawing.Size(259, 152);
+            this.dealWithLicense.Size = new System.Drawing.Size(259, 124);
             this.dealWithLicense.Opening += new System.ComponentModel.CancelEventHandler(this.dealWithLicense_Opening);
             // 
             // sechualTests
@@ -144,6 +145,7 @@
             this.showPersonLicenseHistoryToolStripMenuItem.Name = "showPersonLicenseHistoryToolStripMenuItem";
             this.showPersonLicenseHistoryToolStripMenuItem.Size = new System.Drawing.Size(258, 24);
             this.showPersonLicenseHistoryToolStripMenuItem.Text = "show person license history";
+            this.showPersonLicenseHistoryToolStripMenuItem.Click += new System.EventHandler(this.showPersonLicenseHistoryToolStripMenuItem_Click);
             // 
             // rowsNum
             // 

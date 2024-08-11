@@ -128,5 +128,16 @@ namespace fullRealProject
             Form frm = new showLicenseInfo((int)localDrivingLicenseApps.CurrentRow.Cells[0].Value);
             frm.ShowDialog();
         }
+
+        private void showPersonLicenseHistoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm = new showDriverLicenses((int)localDrivingLicenseApps.CurrentRow.Cells[0].Value);
+            frm.ShowDialog();
+        }
+
+        private void localDrivingLicenseApps_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
