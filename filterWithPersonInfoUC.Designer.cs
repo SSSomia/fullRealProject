@@ -63,6 +63,7 @@
             this.nationalNumber.Name = "nationalNumber";
             this.nationalNumber.Size = new System.Drawing.Size(100, 22);
             this.nationalNumber.TabIndex = 8;
+            this.nationalNumber.TextChanged += new System.EventHandler(this.nationalNumber_TextChanged);
             this.nationalNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nationalNumber_KeyPress_1);
             // 
             // filter

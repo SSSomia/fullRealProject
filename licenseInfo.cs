@@ -30,6 +30,13 @@ namespace fullRealProject
         {
 
         }
+
+        public void printLicense(int licenseID)
+        {
+            this._licenseID = licenseID;
+            _loadInfo();
+        }
+
         public void showDate(int applicationID)
         {
             this.applicationID = applicationID;
@@ -38,7 +45,10 @@ namespace fullRealProject
 
         private void _loadInfo()
         {
-            _licenseID = clsLicense.getLicenseID(applicationID);
+            if (_licenseID == 0)
+            {
+                _licenseID = clsLicense.getLicenseID(applicationID);
+            }
             _license = clsLicense.printLicense(_licenseID);
             _drvier = clsDriver.printDriver(_license.driverID);
             _showLicenseInfo();

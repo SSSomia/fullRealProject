@@ -92,5 +92,17 @@ namespace fullRealProject
             Form frm = new drivingLicenseApp();
             frm.ShowDialog();
         }
+
+        private void driversToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm = new showDrivers();
+            frm.ShowDialog();
+        }
+
+        private void renewDrivingLicensesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm = new renewReplaceLicense();
+            frm.ShowDialog();
+        }
     }
 }

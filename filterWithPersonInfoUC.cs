@@ -72,5 +72,10 @@ namespace fullRealProject
             frm.endWithAddPerson += showPersonData;
             frm.ShowDialog();
         }
+
+        private void nationalNumber_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

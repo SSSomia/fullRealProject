@@ -100,6 +100,12 @@
     <Compile Include="editTestType.Designer.cs">
       <DependentUpon>editTestType.cs</DependentUpon>
     </Compile>
+    <Compile Include="filterLicenseWithID.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="filterLicenseWithID.Designer.cs">
+      <DependentUpon>filterLicenseWithID.cs</DependentUpon>
+    </Compile>
     <Compile Include="filterWithPersonInfoUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -130,11 +136,23 @@
     <Compile Include="personTestDataUC.Designer.cs">
       <DependentUpon>personTestDataUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="renewReplaceLicense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="renewReplaceLicense.Designer.cs">
+      <DependentUpon>renewReplaceLicense.cs</DependentUpon>
+    </Compile>
     <Compile Include="showDriverLicenses.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="showDriverLicenses.Designer.cs">
       <DependentUpon>showDriverLicenses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="showDrivers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="showDrivers.Designer.cs">
+      <DependentUpon>showDrivers.cs</DependentUpon>
     </Compile>
     <Compile Include="showLicenseInfo.cs">
       <SubType>Form</SubType>
@@ -246,6 +264,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="addEditTest.resx">
       <DependentUpon>addEditTest.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="addEditUser.resx">
       <DependentUpon>addEditUser.cs</DependentUpon>
@@ -266,6 +285,9 @@
     <EmbeddedResource Include="editTestType.resx">
       <DependentUpon>editTestType.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="filterLicenseWithID.resx">
+      <DependentUpon>filterLicenseWithID.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="filterWithPersonInfoUC.resx">
       <DependentUpon>filterWithPersonInfoUC.cs</DependentUpon>
     </EmbeddedResource>
@@ -281,8 +303,14 @@
     <EmbeddedResource Include="personTestDataUC.resx">
       <DependentUpon>personTestDataUC.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="renewReplaceLicense.resx">
+      <DependentUpon>renewReplaceLicense.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="showDriverLicenses.resx">
       <DependentUpon>showDriverLicenses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="showDrivers.resx">
+      <DependentUpon>showDrivers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="showLicenseInfo.resx">
       <DependentUpon>showLicenseInfo.cs</DependentUpon>
