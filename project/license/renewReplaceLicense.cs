@@ -72,11 +72,11 @@ namespace fullRealProject
         private void issue_Click(object sender, EventArgs e)
         {
             _licenseID = filterLicenseWithID1.getLicenseID();
-            _appID = clsLicense.getAppID(_licenseID);
             if (_licenseID == 0)
             { return; }
             else
             {
+            _appID = clsLicense.getAppID(_licenseID);
                 _license = clsLicense.printLicense(_licenseID);
                 _app = clsApp.printApp(_appID);
                     _app.fees = int.Parse(totalFees.Text);
@@ -97,7 +97,7 @@ namespace fullRealProject
                 {
                     _app.applicationInfoID = 5;
                 }
-                int newAppID = clsApp.addNewApp(_app);
+                int newAppID = clsApp.addNewApp(_app, 3);
                 _license.isCreatedByUser = Current_user.userID;
                 _license.applicationID = newAppID;
                 // have to make the application first

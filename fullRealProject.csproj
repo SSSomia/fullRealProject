@@ -46,306 +46,297 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="add&amp;editPerson.cs">
+    <Compile Include="project\person\add&amp;editPerson.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="add&amp;editPerson.Designer.cs">
+    <Compile Include="project\person\add&amp;editPerson.Designer.cs">
       <DependentUpon>add&amp;editPerson.cs</DependentUpon>
     </Compile>
-    <Compile Include="add&amp;editPersonUC.cs">
+    <Compile Include="project\person\add&amp;editPersonUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="add&amp;editPersonUC.Designer.cs">
+    <Compile Include="project\person\add&amp;editPersonUC.Designer.cs">
       <DependentUpon>add&amp;editPersonUC.cs</DependentUpon>
     </Compile>
-    <Compile Include="addEditTest.cs">
+    <Compile Include="project\testType\addEditTest.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="addEditTest.Designer.cs">
+    <Compile Include="project\testType\addEditTest.Designer.cs">
       <DependentUpon>addEditTest.cs</DependentUpon>
     </Compile>
-    <Compile Include="addEditUser.cs">
+    <Compile Include="project\user\addEditUser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="addEditUser.Designer.cs">
+    <Compile Include="project\user\addEditUser.Designer.cs">
       <DependentUpon>addEditUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="appBasicInfoUC.cs">
+    <Compile Include="project\application\appBasicInfoUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="appBasicInfoUC.Designer.cs">
+    <Compile Include="project\application\appBasicInfoUC.Designer.cs">
       <DependentUpon>appBasicInfoUC.cs</DependentUpon>
     </Compile>
-    <Compile Include="applicationInfoUC.cs">
+    <Compile Include="project\application\applicationInfoUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="applicationInfoUC.Designer.cs">
+    <Compile Include="project\application\applicationInfoUC.Designer.cs">
       <DependentUpon>applicationInfoUC.cs</DependentUpon>
     </Compile>
-    <Compile Include="drivingLicenseApp.cs">
+    <Compile Include="project\application\drivingLicenseApp.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="drivingLicenseApp.Designer.cs">
+    <Compile Include="project\application\drivingLicenseApp.Designer.cs">
       <DependentUpon>drivingLicenseApp.cs</DependentUpon>
     </Compile>
-    <Compile Include="drivingLicenseApplicationInfoUC.cs">
+    <Compile Include="project\application\drivingLicenseApplicationInfoUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="drivingLicenseApplicationInfoUC.Designer.cs">
+    <Compile Include="project\application\drivingLicenseApplicationInfoUC.Designer.cs">
       <DependentUpon>drivingLicenseApplicationInfoUC.cs</DependentUpon>
     </Compile>
-    <Compile Include="editTestType.cs">
+    <Compile Include="project\applicationType\editTestType.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="editTestType.Designer.cs">
+    <Compile Include="project\applicationType\editTestType.Designer.cs">
       <DependentUpon>editTestType.cs</DependentUpon>
     </Compile>
-    <Compile Include="filterLicenseWithID.cs">
+    <Compile Include="project\license\filterLicenseWithID.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="filterLicenseWithID.Designer.cs">
+    <Compile Include="project\license\filterLicenseWithID.Designer.cs">
       <DependentUpon>filterLicenseWithID.cs</DependentUpon>
     </Compile>
-    <Compile Include="filterWithPersonInfoUC.cs">
+    <Compile Include="project\person\filterWithPersonInfoUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="filterWithPersonInfoUC.Designer.cs">
+    <Compile Include="project\person\filterWithPersonInfoUC.Designer.cs">
       <DependentUpon>filterWithPersonInfoUC.cs</DependentUpon>
     </Compile>
-    <Compile Include="issueDrivingLicense.cs">
+    <Compile Include="project\license\issueDrivingLicense.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="issueDrivingLicense.Designer.cs">
+    <Compile Include="project\license\issueDrivingLicense.Designer.cs">
       <DependentUpon>issueDrivingLicense.cs</DependentUpon>
     </Compile>
-    <Compile Include="licenseInfo.cs">
+    <Compile Include="project\license\licenseInfo.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="licenseInfo.Designer.cs">
+    <Compile Include="project\license\licenseInfo.Designer.cs">
       <DependentUpon>licenseInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="newDrivingLicenses.cs">
+    <Compile Include="project\license\newDrivingLicenses.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="newDrivingLicenses.Designer.cs">
+    <Compile Include="project\license\newDrivingLicenses.Designer.cs">
       <DependentUpon>newDrivingLicenses.cs</DependentUpon>
     </Compile>
-    <Compile Include="personTestDataUC.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="personTestDataUC.Designer.cs">
-      <DependentUpon>personTestDataUC.cs</DependentUpon>
-    </Compile>
-    <Compile Include="renewReplaceLicense.cs">
+    <Compile Include="project\license\renewReplaceLicense.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="renewReplaceLicense.Designer.cs">
+    <Compile Include="project\license\renewReplaceLicense.Designer.cs">
       <DependentUpon>renewReplaceLicense.cs</DependentUpon>
     </Compile>
-    <Compile Include="showDriverLicenses.cs">
+    <Compile Include="project\license\showDriverLicenses.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="showDriverLicenses.Designer.cs">
+    <Compile Include="project\license\showDriverLicenses.Designer.cs">
       <DependentUpon>showDriverLicenses.cs</DependentUpon>
     </Compile>
-    <Compile Include="showDrivers.cs">
+    <Compile Include="project\driver\showDrivers.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="showDrivers.Designer.cs">
+    <Compile Include="project\driver\showDrivers.Designer.cs">
       <DependentUpon>showDrivers.cs</DependentUpon>
     </Compile>
-    <Compile Include="showLicenseInfo.cs">
+    <Compile Include="project\license\showLicenseInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="showLicenseInfo.Designer.cs">
+    <Compile Include="project\license\showLicenseInfo.Designer.cs">
       <DependentUpon>showLicenseInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="takeTest.cs">
+    <Compile Include="project\test\takeTest.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="takeTest.Designer.cs">
+    <Compile Include="project\test\takeTest.Designer.cs">
       <DependentUpon>takeTest.cs</DependentUpon>
     </Compile>
-    <Compile Include="tests.cs">
+    <Compile Include="project\test\tests.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="tests.Designer.cs">
+    <Compile Include="project\test\tests.Designer.cs">
       <DependentUpon>tests.cs</DependentUpon>
     </Compile>
-    <Compile Include="testTypes.cs">
+    <Compile Include="project\testType\testTypes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="testTypes.Designer.cs">
+    <Compile Include="project\testType\testTypes.Designer.cs">
       <DependentUpon>testTypes.cs</DependentUpon>
     </Compile>
-    <Compile Include="applicationTypes.cs">
+    <Compile Include="project\applicationType\applicationTypes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="applicationTypes.Designer.cs">
+    <Compile Include="project\applicationType\applicationTypes.Designer.cs">
       <DependentUpon>applicationTypes.cs</DependentUpon>
     </Compile>
-    <Compile Include="changeUserPassword.cs">
+    <Compile Include="project\user\changeUserPassword.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="changeUserPassword.Designer.cs">
+    <Compile Include="project\user\changeUserPassword.Designer.cs">
       <DependentUpon>changeUserPassword.cs</DependentUpon>
     </Compile>
-    <Compile Include="Current user.cs" />
-    <Compile Include="dashBoard.cs">
+    <Compile Include="project\currentUser\Current user.cs" />
+    <Compile Include="project\dashBoard\dashBoard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="dashBoard.Designer.cs">
+    <Compile Include="project\dashBoard\dashBoard.Designer.cs">
       <DependentUpon>dashBoard.cs</DependentUpon>
     </Compile>
-    <Compile Include="editAppType.cs">
+    <Compile Include="project\applicationType\editAppType.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="editAppType.Designer.cs">
+    <Compile Include="project\applicationType\editAppType.Designer.cs">
       <DependentUpon>editAppType.cs</DependentUpon>
     </Compile>
-    <Compile Include="loginScreen.cs">
+    <Compile Include="project\loginScreen\loginScreen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="loginScreen.Designer.cs">
+    <Compile Include="project\loginScreen\loginScreen.Designer.cs">
       <DependentUpon>loginScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="managePeople.cs">
+    <Compile Include="project\person\managePeople.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="managePeople.Designer.cs">
+    <Compile Include="project\person\managePeople.Designer.cs">
       <DependentUpon>managePeople.cs</DependentUpon>
     </Compile>
-    <Compile Include="manageUsers.cs">
+    <Compile Include="project\user\manageUsers.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="manageUsers.Designer.cs">
+    <Compile Include="project\user\manageUsers.Designer.cs">
       <DependentUpon>manageUsers.cs</DependentUpon>
     </Compile>
-    <Compile Include="personInfoUC.cs">
+    <Compile Include="project\person\personInfoUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="personInfoUC.Designer.cs">
+    <Compile Include="project\person\personInfoUC.Designer.cs">
       <DependentUpon>personInfoUC.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="personInfo.cs">
+    <Compile Include="project\person\personInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="personInfo.Designer.cs">
+    <Compile Include="project\person\personInfo.Designer.cs">
       <DependentUpon>personInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="showUserDataFm.cs">
+    <Compile Include="project\user\showUserDataFm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="showUserDataFm.Designer.cs">
+    <Compile Include="project\user\showUserDataFm.Designer.cs">
       <DependentUpon>showUserDataFm.cs</DependentUpon>
     </Compile>
-    <Compile Include="showUserDataUC0.cs">
+    <Compile Include="project\user\showUserDataUC0.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="showUserDataUC0.Designer.cs">
+    <Compile Include="project\user\showUserDataUC0.Designer.cs">
       <DependentUpon>showUserDataUC0.cs</DependentUpon>
     </Compile>
-    <Compile Include="userInfoUC.cs">
+    <Compile Include="project\user\userInfoUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="userInfoUC.Designer.cs">
+    <Compile Include="project\user\userInfoUC.Designer.cs">
       <DependentUpon>userInfoUC.cs</DependentUpon>
     </Compile>
-    <Compile Include="validation.cs" />
-    <EmbeddedResource Include="add&amp;editPerson.resx">
+    <Compile Include="project\validation\validation.cs" />
+    <EmbeddedResource Include="project\person\add&amp;editPerson.resx">
       <DependentUpon>add&amp;editPerson.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="add&amp;editPersonUC.resx">
+    <EmbeddedResource Include="project\person\add&amp;editPersonUC.resx">
       <DependentUpon>add&amp;editPersonUC.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="addEditTest.resx">
+    <EmbeddedResource Include="project\testType\addEditTest.resx">
       <DependentUpon>addEditTest.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="addEditUser.resx">
+    <EmbeddedResource Include="project\user\addEditUser.resx">
       <DependentUpon>addEditUser.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="appBasicInfoUC.resx">
+    <EmbeddedResource Include="project\application\appBasicInfoUC.resx">
       <DependentUpon>appBasicInfoUC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="applicationInfoUC.resx">
+    <EmbeddedResource Include="project\application\applicationInfoUC.resx">
       <DependentUpon>applicationInfoUC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="drivingLicenseApp.resx">
+    <EmbeddedResource Include="project\application\drivingLicenseApp.resx">
       <DependentUpon>drivingLicenseApp.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="drivingLicenseApplicationInfoUC.resx">
+    <EmbeddedResource Include="project\application\drivingLicenseApplicationInfoUC.resx">
       <DependentUpon>drivingLicenseApplicationInfoUC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="editTestType.resx">
+    <EmbeddedResource Include="project\applicationType\editTestType.resx">
       <DependentUpon>editTestType.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="filterLicenseWithID.resx">
+    <EmbeddedResource Include="project\license\filterLicenseWithID.resx">
       <DependentUpon>filterLicenseWithID.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="filterWithPersonInfoUC.resx">
+    <EmbeddedResource Include="project\person\filterWithPersonInfoUC.resx">
       <DependentUpon>filterWithPersonInfoUC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="issueDrivingLicense.resx">
+    <EmbeddedResource Include="project\license\issueDrivingLicense.resx">
       <DependentUpon>issueDrivingLicense.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="licenseInfo.resx">
+    <EmbeddedResource Include="project\license\licenseInfo.resx">
       <DependentUpon>licenseInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="newDrivingLicenses.resx">
+    <EmbeddedResource Include="project\license\newDrivingLicenses.resx">
       <DependentUpon>newDrivingLicenses.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="personTestDataUC.resx">
-      <DependentUpon>personTestDataUC.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="renewReplaceLicense.resx">
+    <EmbeddedResource Include="project\license\renewReplaceLicense.resx">
       <DependentUpon>renewReplaceLicense.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="showDriverLicenses.resx">
+    <EmbeddedResource Include="project\license\showDriverLicenses.resx">
       <DependentUpon>showDriverLicenses.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="showDrivers.resx">
+    <EmbeddedResource Include="project\driver\showDrivers.resx">
       <DependentUpon>showDrivers.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="showLicenseInfo.resx">
+    <EmbeddedResource Include="project\license\showLicenseInfo.resx">
       <DependentUpon>showLicenseInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="takeTest.resx">
+    <EmbeddedResource Include="project\test\takeTest.resx">
       <DependentUpon>takeTest.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="tests.resx">
+    <EmbeddedResource Include="project\test\tests.resx">
       <DependentUpon>tests.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="testTypes.resx">
+    <EmbeddedResource Include="project\testType\testTypes.resx">
       <DependentUpon>testTypes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="applicationTypes.resx">
+    <EmbeddedResource Include="project\applicationType\applicationTypes.resx">
       <DependentUpon>applicationTypes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="changeUserPassword.resx">
+    <EmbeddedResource Include="project\user\changeUserPassword.resx">
       <DependentUpon>changeUserPassword.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="dashBoard.resx">
+    <EmbeddedResource Include="project\dashBoard\dashBoard.resx">
       <DependentUpon>dashBoard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="editAppType.resx">
+    <EmbeddedResource Include="project\applicationType\editAppType.resx">
       <DependentUpon>editAppType.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="loginScreen.resx">
+    <EmbeddedResource Include="project\loginScreen\loginScreen.resx">
       <DependentUpon>loginScreen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="managePeople.resx">
+    <EmbeddedResource Include="project\person\managePeople.resx">
       <DependentUpon>managePeople.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="manageUsers.resx">
+    <EmbeddedResource Include="project\user\manageUsers.resx">
       <DependentUpon>manageUsers.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="personInfoUC.resx">
+    <EmbeddedResource Include="project\person\personInfoUC.resx">
       <DependentUpon>personInfoUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -358,16 +349,16 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="personInfo.resx">
+    <EmbeddedResource Include="project\person\personInfo.resx">
       <DependentUpon>personInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="showUserDataFm.resx">
+    <EmbeddedResource Include="project\user\showUserDataFm.resx">
       <DependentUpon>showUserDataFm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="showUserDataUC0.resx">
+    <EmbeddedResource Include="project\user\showUserDataUC0.resx">
       <DependentUpon>showUserDataUC0.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="userInfoUC.resx">
+    <EmbeddedResource Include="project\user\userInfoUC.resx">
       <DependentUpon>userInfoUC.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
@@ -400,9 +391,9 @@
       <Project>{27edbc25-3df9-45f9-8a61-276932f18588}</Project>
       <Name>manageApplicationTypesBusiness</Name>
     </ProjectReference>
-    <ProjectReference Include="..\myProjectForContact\businessLayer0\businessLayer0.csproj">
+    <ProjectReference Include="..\myProjectForContact\businessLayer0\pesronBusiness.csproj">
       <Project>{5e9e56dd-6156-44f4-beb7-affbc476a228}</Project>
-      <Name>businessLayer0</Name>
+      <Name>pesronBusiness</Name>
     </ProjectReference>
     <ProjectReference Include="..\personTestBusiness\personTestsBusiness.csproj">
       <Project>{0e428994-c219-4337-8d67-32a93c8d5534}</Project>

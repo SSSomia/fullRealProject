@@ -1,15 +1,7 @@
 ﻿using personTestsBusiness;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using testTypesBusiness;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace fullRealProject
 {
@@ -18,8 +10,7 @@ namespace fullRealProject
         private int _applicationID;
         private string _title;
         private int _passedTests;
-         private int _testTID;
-        static private int _trial = 0;
+        private int _testTID;
         private bool isLastAppLocked = false;
         string license;
 
@@ -29,7 +20,7 @@ namespace fullRealProject
             _title = title;
             _passedTests = passedTests;
             label1.Text = title;
-           _applicationID = applicationID;
+            _applicationID = applicationID;
             _testTID = _testTypeID(passedTests);
             license = licenseClass;
 
@@ -112,7 +103,7 @@ namespace fullRealProject
             }
             else
             {
-                dealWithTest.Enabled =true;
+                dealWithTest.Enabled = true;
             }
         }
 
