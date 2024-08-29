@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -35,6 +36,62 @@ namespace fullRealProject
             }
             else {
                 MessageBox.Show("this user is not active. user name or password isn't correct");
+            }
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+            {
+                string keyPath = @"HKEY_CURRENT_USER\SOFTWARE\fullRealPro";
+                string valueName = "userName";
+                string valueDataName = userName.Text;
+                string valuePass = "password";
+                string valueDataPass = password.Text;
+
+                try
+                {
+                    // Write the value to the Registry
+                    Registry.SetValue(keyPath, valueName, valueDataName, RegistryValueKind.String);
+                    Registry.SetValue(keyPath, valuePass, valueDataPass, RegistryValueKind.String);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"An error occurred: {ex.Message}");
+                }
+            }
+        }
+
+        private void loginScreen_Load(object sender, EventArgs e)
+        {
+            string keyPath = @"HKEY_CURRENT_USER\SOFTWARE\fullRealPro";
+            string valueName = "userName";
+            string valuePass = "password";
+
+            try
+            {
+                // Read the value from the Registry
+                string valueDataName = Registry.GetValue(keyPath, valueName, null) as string;
+                string valueDataPass= Registry.GetValue(keyPath, valuePass, null) as string;
+
+
+                if (valueDataName != null && valueDataPass != null)
+                {
+                    userName.Text = valueDataName;
+                    password.Text = valueDataPass;
+                    checkBox1 .Checked = true;
+                }
+                else
+                {
+                    userName.Text = "";
+                    password.Text = "";
+                    checkBox1 .Checked = false;
+                
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An error occurred: {ex.Message}");
             }
         }
     }
