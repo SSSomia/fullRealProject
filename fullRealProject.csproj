@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="project\global\currentSourceNameLog\currentSourceNameLog.cs" />
     <Compile Include="project\person\add&amp;editPerson.cs">
       <SubType>Form</SubType>
     </Compile>
