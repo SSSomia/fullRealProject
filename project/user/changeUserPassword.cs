@@ -91,7 +91,8 @@ namespace fullRealProject
             }
             else
             {
-                clsUser.updateUserPass(newPass.Text, Current_user.userID);
+                string hashPass = hashing.ComputeHash(newPass.Text);
+                clsUser.updateUserPass(hashPass, Current_user.userID);
                 this.Close();
             }
         }

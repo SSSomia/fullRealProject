@@ -22,7 +22,8 @@ namespace fullRealProject
         // there is a problem that i can't close the before call dashboard
         private void login_Click(object sender, EventArgs e)
         {
-            int userID = clsUser.loginUser(userName.Text, password.Text);
+            string hashPass = hashing.ComputeHash(password.Text);
+            int userID = clsUser.loginUser(userName.Text, hashPass);
             if (userID != -1)
             {
                 Current_user.userName = userName.Text;

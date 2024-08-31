@@ -135,7 +135,8 @@ namespace fullRealProject
 
         private clsUser _fillData()
         {
-            _user = new clsUser(filterWithPersonInfoUC1.getPersonId(), userName.Text, password.Text, isActive.Checked);
+            string hashPass = hashing.ComputeHash(password.Text);
+            _user = new clsUser(filterWithPersonInfoUC1.getPersonId(), userName.Text, hashPass, isActive.Checked);
             return _user;
         }
 
@@ -194,6 +195,7 @@ namespace fullRealProject
             }
             else
             {
+
                 clsUser.updateUser(_fillData(), _userId);
                 this.Close();
             }
