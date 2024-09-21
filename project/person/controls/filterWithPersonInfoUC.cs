@@ -69,7 +69,6 @@ namespace fullRealProject
         private void addNewPerson_Click_1(object sender, EventArgs e)
         {
             add_editPerson frm = new add_editPerson(-1);  // intialize object from form3   [1]
-            frm.endWithAddPerson += showPersonData;
             frm.ShowDialog();
         }
 

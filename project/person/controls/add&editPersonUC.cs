@@ -107,7 +107,7 @@ namespace fullRealProject
             {
                 return;
             }
-            if (clsValidation.isNationalNumExist(int.Parse(nationalNum.Text)))
+            if (clsValidation.isNationalNumExist(int.Parse(nationalNum.Text)) && int.Parse(nationalNum.Text)!= _person.nationalNum)
             {
                 return;
             }

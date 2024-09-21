@@ -16,7 +16,6 @@ namespace fullRealProject
     public partial class add_editPerson : Form
     {
         public delegate void dataBackDlg(int personId);
-        public event dataBackDlg endWithAddPerson;
         public add_editPerson(int personID)
         {
             InitializeComponent();
@@ -35,13 +34,17 @@ namespace fullRealProject
         }
         private void endWithThisForm(int nationalNum)
         {
-            endWithAddPerson(nationalNum);
             this.Close();
         }
 
         private void add_editPerson_Load(object sender, EventArgs e)
         {
             
+        }
+
+        private void addEditPerson1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
